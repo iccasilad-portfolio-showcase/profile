@@ -134,6 +134,24 @@
     opacity: 0.95;
 }
 
+/* Stacked Pinning Transition Enhancements for Experience Timeline */
+.experience-pin-card {
+    will-change: transform, opacity;
+}
+
+.experience-pin-card.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(23, 23, 23, 0.98);
+}
+
+.experience-pin-card.active .timeline-dot {
+    background-color: #22c55e !important;
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
+}
+
 /* Smooth Scrollbars */
 ::-webkit-scrollbar {
     width: 8px;
