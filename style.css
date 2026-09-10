@@ -128,6 +128,17 @@
     opacity: 0.95;
 }
 
+/* Enhanced Hover Effects & Animations for Cards */
+.custom-hover-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.custom-hover-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(216, 58, 58, 0.4);
+    box-shadow: 0 15px 35px -10px rgba(216, 58, 58, 0.15);
+}
+
 /* 3-Column Timeline Pinned Scroll Card & Dot States */
 .experience-pin-card {
     will-change: transform, opacity;
