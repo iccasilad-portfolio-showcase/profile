@@ -36,6 +36,30 @@
     animation-play-state: paused;
 }
 
+/* Enhanced Featured Work Image Hover Effects */
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-cover: cover;
+    filter: grayscale(100%);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.06);
+}
+
+/* Deepens gradient contrast on hover for enhanced text legibility */
+.project-card .absolute.inset-0 {
+    transition: opacity 0.5s ease;
+    opacity: 0.85;
+}
+
+.project-card:hover .absolute.inset-0 {
+    opacity: 0.95;
+}
+
 /* Smooth Scrollbars */
 ::-webkit-scrollbar {
     width: 8px;
