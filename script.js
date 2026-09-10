@@ -1,135 +1,82 @@
-// Sticky Experience Row-Pinning, Scroll Line Color Fill & Testimonial Slider Logic
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Ian Carlo Casilad Portfolio Loaded Successfully.");
+    // 1. Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    // --- TIMELINE STICKY & SCROLL LINE EFFECT ---
-    const cards = document.querySelectorAll('.experience-pin-card');
-    const container = document.querySelector('.experience-sticky-container');
-    const progressLine = document.getElementById('timeline-progress-line');
-    
-    if (window.innerWidth >= 1024) {
-        cards.forEach((card, index) => {
-            card.style.top = `${120 + (index * 24)}px`;
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
     }
 
-    const updateTimelineProgress = () => {
-        if (!container || !progressLine) return;
-
-        const containerRect = container.getBoundingClientRect();
-        const containerHeight = container.offsetHeight;
-        const windowHeight = window.innerHeight;
-
-        const scrollDistanceFromTop = windowHeight / 2 - containerRect.top;
-        
-        let scrollPercentage = (scrollDistanceFromTop / containerHeight) * 100;
-        scrollPercentage = Math.max(0, Math.min(100, scrollPercentage));
-
-        progressLine.style.height = `${scrollPercentage}%`;
-
-        cards.forEach((card) => {
-            const cardRect = card.getBoundingClientRect();
-            if (cardRect.top <= windowHeight * 0.5) {
-                card.classList.add('active');
-            } else {
-                card.classList.remove('active');
-            }
-        });
-    };
-
-    window.addEventListener('scroll', updateTimelineProgress, { passive: true });
-    updateTimelineProgress();
-
-
-    // --- TESTIMONIAL SLIDER LOGIC (Fixed & Autoplay) ---
+    // 2. Testimonial Slider Controls
     const track = document.getElementById('testimonial-track');
     const prevBtn = document.getElementById('testimonial-prev');
     const nextBtn = document.getElementById('testimonial-next');
-    const sliderSection = document.getElementById('testimonials');
 
     if (track && prevBtn && nextBtn) {
-        const slides = Array.from(track.children);
         let currentIndex = 0;
-        let autoplayTimer = null;
-        const AUTOPLAY_INTERVAL = 4500; // Time in ms between transitions
+        const slides = track.children;
+        const totalSlides = slides.length;
 
-        // Determine number of visible slides based on screen width
-        const getVisibleCount = () => {
-            if (window.innerWidth >= 1024) return 3; // lg: 3 visible
-            if (window.innerWidth >= 768) return 2;  // md: 2 visible
-            return 1;                                // sm: 1 visible
-        };
+        function getSlidesPerView() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
 
-        const updateSliderPosition = (smooth = true) => {
-            if (!track.children.length) return;
-            const visibleCount = getVisibleCount();
-            const maxIndex = Math.max(0, slides.length - visibleCount);
-
-            if (currentIndex > maxIndex) {
-                currentIndex = 0; // Loop back around seamlessly
-            } else if (currentIndex < 0) {
-                currentIndex = maxIndex;
-            }
-
-            // Temporarily toggle transition state if needed
-            track.style.transition = smooth ? 'transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)' : 'none';
-
-            // Calculate precise slide width including gap/padding offsets
+        function updateSlider() {
+            const slidesPerView = getSlidesPerView();
+            const maxIndex = Math.max(0, totalSlides - slidesPerView);
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            
             const slideWidth = slides[0].getBoundingClientRect().width;
             track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-        };
+        }
 
-        const nextSlide = () => {
-            currentIndex++;
-            updateSliderPosition(true);
-        };
-
-        const prevSlide = () => {
-            currentIndex--;
-            updateSliderPosition(true);
-        };
-
-        // Event Listeners for Buttons
         nextBtn.addEventListener('click', () => {
-            nextSlide();
-            resetAutoplay();
+            const slidesPerView = getSlidesPerView();
+            const maxIndex = Math.max(0, totalSlides - slidesPerView);
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateSlider();
+            }
         });
 
         prevBtn.addEventListener('click', () => {
-            prevSlide();
-            resetAutoplay();
-        });
-
-        // Autoplay Logic
-        const startAutoplay = () => {
-            if (autoplayTimer) clearInterval(autoplayTimer);
-            autoplayTimer = setInterval(() => {
-                nextSlide();
-            }, AUTOPLAY_INTERVAL);
-        };
-
-        const stopAutoplay = () => {
-            if (autoplayTimer) {
-                clearInterval(autoplayTimer);
-                autoplayTimer = null;
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
             }
-        };
-
-        const resetAutoplay = () => {
-            stopAutoplay();
-            startAutoplay();
-        };
-
-        // Pause autoplay on hover for better user control
-        sliderSection.addEventListener('mouseenter', stopAutoplay);
-        sliderSection.addEventListener('mouseleave', startAutoplay);
-
-        // Recalculate dimensions on window resize
-        window.addEventListener('resize', () => {
-            updateSliderPosition(false);
         });
 
-        // Initialize Autoplay loop
-        startAutoplay();
+        window.addEventListener('resize', updateSlider);
+    }
+
+    // 3. Dynamic Timeline Progress Line Tracker
+    const timelineContainer = document.querySelector('.experience-sticky-container');
+    const progressLine = document.getElementById('timeline-progress-line');
+
+    if (timelineContainer && progressLine) {
+        window.addEventListener('scroll', () => {
+            const rect = timelineContainer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            const containerTop = rect.top;
+            const containerHeight = rect.height;
+            
+            if (containerTop <= windowHeight && containerTop + containerHeight >= 0) {
+                let scrolled = (windowHeight - containerTop) / (containerHeight + windowHeight);
+                let percentage = Math.min(Math.max(scrolled * 100, 0), 100);
+                progressLine.style.height = `${percentage}%`;
+            }
+        });
     }
 });
