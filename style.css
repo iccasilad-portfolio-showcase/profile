@@ -1,149 +1,55 @@
-/* Reset & Base Styles */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #0b0b0b;
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #0b0b0b;
-}
-::-webkit-scrollbar-thumb {
-    background: #262626;
-    border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #404040;
-}
-
-/* Floating Animations for Hero Badges */
-@keyframes floatBadge1 {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(1deg); }
-}
-
-@keyframes floatBadge2 {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(12px) rotate(-1deg); }
-}
-
-@keyframes floatBadge3 {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
-}
-
-.float-badge-1 {
-    animation: floatBadge1 5s ease-in-out infinite;
-}
-
-.float-badge-2 {
-    animation: floatBadge2 6s ease-in-out infinite;
-}
-
-.float-badge-3 {
-    animation: floatBadge3 4.5s ease-in-out infinite;
-}
-
-/* Dual Row Marquee Animation */
-@keyframes scrollLeft {
+/* Custom Animations and Marquee Effects */
+@keyframes marqueeLeft {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
 
-@keyframes scrollRight {
+@keyframes marqueeRight {
     0% { transform: translateX(-50%); }
     100% { transform: translateX(0); }
 }
 
-.carousel-wrapper {
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+@keyframes bounceSlow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
 
+.animate-bounce-slow {
+    animation: bounceSlow 4s ease-in-out infinite;
+}
+
+/* Marquee Row Configurations */
 .marquee-row-1 {
     display: flex;
     width: max-content;
-    animation: scrollLeft 45s linear infinite;
+    animation: marqueeLeft 35s linear infinite;
 }
 
 .marquee-row-2 {
     display: flex;
     width: max-content;
-    animation: scrollRight 45s linear infinite;
+    animation: marqueeRight 35s linear infinite;
 }
 
-.marquee-row-1:hover, .marquee-row-2:hover {
+.carousel-wrapper:hover .marquee-row-1,
+.carousel-wrapper:hover .marquee-row-2 {
     animation-play-state: paused;
 }
 
-/* Glassmorphism Black & White Hover Effect */
-.project-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    background: rgba(18, 18, 18, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-                border-color 0.5s ease, 
-                box-shadow 0.5s ease,
-                background 0.5s ease;
+/* Smooth Scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-.project-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%) brightness(0.7) contrast(1.1);
-    transform: scale(1);
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
-                filter 0.7s ease;
+::-webkit-scrollbar-track {
+    background: #0b0b0b;
 }
 
-.project-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(255, 255, 255, 0.4);
-    background: rgba(25, 25, 25, 0.75);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
-                inset 0 0 20px rgba(255, 255, 255, 0.03);
+::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 4px;
 }
 
-.project-card:hover img {
-    filter: grayscale(0%) brightness(1) contrast(1);
-    transform: scale(1.06);
-}
-
-/* Timeline Interactive Activation Effects */
-.experience-pin-card.active {
-    border-color: rgba(34, 197, 94, 0.4);
-    background-color: rgba(23, 23, 23, 0.95);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(34, 197, 94, 0.05);
-}
-
-.experience-pin-card.active .timeline-dot {
-    background-color: #22c55e;
-    box-shadow: 0 0 10px #22c55e;
-}
-
-/* Sticky Pinning Effect for Experience Section */
-@media (min-width: 1024px) {
-    .experience-pin-card {
-        position: sticky;
-        top: 120px;
-        transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-    }
+::-webkit-scrollbar-thumb:hover {
+    background: #404040;
 }
