@@ -59,6 +59,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Number Counter Animation Logic for Hero & About Sections
+    const counters = document.querySelectorAll('.counter');
+    let animated = false;
+
+    function runCounters() {
+        if (animated) return;
+        
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const suffix = counter.getAttribute('data-suffix') || '';
+            let count = 0;
+            const speed = Math.max(1, target / 40); // Controls animation smoothness
+
+            function updateCount() {
+                count += speed;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count);
+                    setTimeout(updateCount, 30);
+                } else {
+                    counter.innerText = target + suffix;
+                }
+            }
+            updateCount();
+        });
+        animated = true;
+    }
+
+    // Intersection Observer to trigger counter animations when scrolled into view
+    if (counters.length > 0) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    runCounters();
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe(counters[0].closest('section') || counters[0]);
+    }
+
     // Pinned Timeline Scroll-Driven 3-Column Card Reveal & Dot Lighting Logic
     const experienceContainer = document.querySelector('.experience-pin-container');
     const experienceCards = document.querySelectorAll('.experience-pin-card');
