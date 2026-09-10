@@ -22,57 +22,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressLine = document.getElementById('timeline-progress-line');
 
     if (experienceContainer && experienceCards.length > 0) {
-        window.addEventListener('scroll', () => {
+        // Ensure first card is active on initial load if already in view
+        function handleScrollPinning() {
             const rect = experienceContainer.getBoundingClientRect();
             const containerHeight = experienceContainer.offsetHeight;
             const windowHeight = window.innerHeight;
 
-            // Check if the container is currently occupying the viewport pin zone
             if (rect.top <= 0 && rect.bottom >= windowHeight) {
-                // Calculate raw progress ratio (0 to 1) inside the tall container
                 const scrollDistance = -rect.top;
                 const maxScroll = containerHeight - windowHeight;
                 let progress = scrollDistance / maxScroll;
                 progress = Math.max(0, Math.min(1, progress));
 
-                // Update vertical green progress line height percentage
                 if (progressLine) {
                     progressLine.style.height = `${progress * 100}%`;
                 }
 
-                // Determine active index step based on total cards count
                 const totalCards = experienceCards.length;
                 const activeIndex = Math.min(
                     Math.floor(progress * totalCards),
                     totalCards - 1
                 );
 
-                // Apply active state classes sequentially
                 experienceCards.forEach((card, idx) => {
-                    if (idx === activeIndex) {
+                    if (idx <= activeIndex) {
                         card.classList.add('active');
                     } else {
                         card.classList.remove('active');
                     }
                 });
             } else if (rect.top > 0) {
-                // Reset to state before entering section
                 experienceCards.forEach((card, idx) => {
                     card.classList.remove('active');
                 });
                 if (progressLine) progressLine.style.height = '0%';
             } else if (rect.bottom < windowHeight) {
-                // Lock to final card when scrolling past container bottom
-                experienceCards.forEach((card, idx) => {
-                    if (idx === experienceCards.length - 1) {
-                        card.classList.add('active');
-                    } else {
-                        card.classList.remove('active');
-                    }
+                experienceCards.forEach((card) => {
+                    card.classList.add('active');
                 });
                 if (progressLine) progressLine.style.height = '100%';
             }
-        });
+        }
+
+        window.addEventListener('scroll', handleScrollPinning);
+        window.addEventListener('resize', handleScrollPinning);
+        handleScrollPinning(); // trigger once on load
     }
 
     // Testimonials Carousel Logic
@@ -105,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentIndex < maxIndex) {
                 currentIndex++;
             } else {
-                currentIndex = 0; // Loop back to start
+                currentIndex = 0;
             }
             updateCarousel();
         });
@@ -116,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentIndex > 0) {
                 currentIndex--;
             } else {
-                currentIndex = maxIndex; // Loop to end
+                currentIndex = maxIndex;
             }
             updateCarousel();
         });
