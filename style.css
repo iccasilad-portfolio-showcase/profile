@@ -148,6 +148,23 @@
     transform: scale(1.25);
 }
 
+/* Matrix Background Canvas Stacking */
+#matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ensure content sits on top of the matrix background */
+header, section, footer {
+    position: relative;
+    z-index: 10;
+}
+
 /* Smooth Scrollbars */
 ::-webkit-scrollbar {
     width: 8px;
