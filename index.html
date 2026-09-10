@@ -74,31 +74,42 @@
 
             <!-- Right Column: Profile Picture with Floating Interactive Badges -->
             <div class="lg:col-span-5 relative flex justify-center items-center py-10">
+                <!-- Background subtle glow ring -->
                 <div class="absolute w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-[#d83a3a]/10 to-neutral-800/40 blur-3xl -z-10"></div>
                 
+                <!-- Main Profile Wrapper -->
                 <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl p-2 bg-gradient-to-b from-neutral-800 to-neutral-900 border border-neutral-700/60 shadow-2xl overflow-hidden group">
                     <img src="images/unnamed.webp" alt="Ian Carlo Casilad" class="w-full h-full object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 
-                <div class="absolute -top-4 -left-2 sm:left-4 bg-neutral-900/90 backdrop-blur-md border border-neutral-700 px-4 py-3 rounded-2xl shadow-xl flex items-center space-x-3 float-badge-1">
-                    <div class="w-8 h-8 rounded-full bg-[#d83a3a]/20 text-[#d83a3a] flex items-center justify-center font-bold text-xs">⚡</div>
+                <!-- Floating Badge 1: 8+ Years Experience Counter -->
+                <div class="absolute -top-4 -left-2 sm:left-4 bg-neutral-900/90 backdrop-blur-md border border-neutral-700 px-4 py-3 rounded-2xl shadow-xl flex items-center space-x-3 float-badge-1 animate-bounce-slow">
+                    <div class="w-8 h-8 rounded-full bg-[#d83a3a]/20 text-[#d83a3a] flex items-center justify-center font-bold text-xs">
+                        ⚡
+                    </div>
                     <div>
                         <span class="block text-sm font-bold text-white font-mono">8+ Years</span>
                         <span class="block text-[10px] uppercase tracking-wider text-neutral-400">Experience</span>
                     </div>
                 </div>
 
+                <!-- Floating Badge 2: WordPress / Code Specialist Icon -->
                 <div class="absolute -bottom-6 -right-2 sm:right-4 bg-neutral-900/90 backdrop-blur-md border border-neutral-700 px-4 py-3 rounded-2xl shadow-xl flex items-center space-x-3 float-badge-2">
-                    <div class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-mono text-xs font-bold">&lt;/&gt;</div>
+                    <div class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-mono text-xs font-bold">
+                        &lt;/&gt;
+                    </div>
                     <div>
                         <span class="block text-sm font-bold text-white">Website Dev</span>
                         <span class="block text-[10px] uppercase tracking-wider text-neutral-400">Architect &amp; SEO</span>
                     </div>
                 </div>
 
+                <!-- Floating Badge 3: Elementor / UI Badge (Optional side accent) -->
                 <div class="absolute top-1/2 -right-6 transform -translate-y-1/2 hidden sm:flex bg-neutral-900/90 backdrop-blur-md border border-neutral-700 p-3 rounded-2xl shadow-xl items-center space-x-2 float-badge-3">
-                    <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</div>
+                    <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">
+                        ✓
+                    </div>
                     <span class="text-xs font-medium text-neutral-200">100+ Projects</span>
                 </div>
             </div>
@@ -113,83 +124,198 @@
             <h2 class="text-3xl md:text-5xl font-light tracking-tight">FEATURED WORKS</h2>
         </div>
 
-        <div class="relative w-full overflow-hidden carousel-wrapper flex flex-col gap-6">
+        <div class="relative w-full overflow-hidden carousel-wrapper">
             <!-- ROW 1: Scrolling Left -->
-            <div class="marquee-track-container" id="marqueeContainer1">
-                <div class="marquee-track" id="marqueeTrack1">
-                    <a href="https://haloturfcustommats.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block" data-image="images/haloturf mobile-ver.webp">
-                        <img src="images/halo.webp" alt="Halo Turf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                            <div>
-                                <h3 class="text-xl font-normal text-white">Halo Turf Showcase</h3>
-                                <span class="text-xs text-neutral-400 font-mono">Custom E-Commerce &amp; Animation</span>
-                            </div>
-                            <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+            <div class="flex marquee-row-1 mb-6">
+                <!-- Card 1: Halo Turf -->
+                <a href="https://haloturfcustommats.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/halo.webp" alt="Halo Turf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Halo Turf Showcase</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Custom E-Commerce &amp; Animation</span>
                         </div>
-                    </a>
-                    <a href="https://allfazeelectric.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block" data-image="images/allfaze-mobile-ver.webp">
-                        <img src="images/allfaze.webp" alt="All Faze Electric" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                            <div>
-                                <h3 class="text-xl font-normal text-white">All Faze Electric</h3>
-                                <span class="text-xs text-neutral-400 font-mono">Brand Architecture &amp; UI</span>
-                            </div>
-                            <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 2: All Faze Electric -->
+                <a href="https://allfazeelectric.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/allfaze.webp" alt="All Faze Electric" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">All Faze Electric</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Brand Architecture &amp; UI</span>
                         </div>
-                    </a>
-                    <a href="https://poulter.law/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block" data-image="images/aj mobile-ver.webp">
-                        <img src="images/Pouler-Law.webp" alt="Pouler Law" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                            <div>
-                                <h3 class="text-xl font-normal text-white">Poulter Law Group</h3>
-                                <span class="text-xs text-neutral-400 font-mono">Legal Corporate Platform</span>
-                            </div>
-                            <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 3: Poulter Law -->
+                <a href="https://poulter.law/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/Pouler-Law.webp" alt="Pouler Law" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Poulter Law Group</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Legal Corporate Platform</span>
                         </div>
-                    </a>
-                </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 4: Luxury Window Coverings -->
+                <a href="https://luxurywindowcoverings.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/lux.webp" alt="Lux" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Luxury Window Coverings</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Cinematic UI &amp; Styling</span>
+                        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 5: Gourmaze -->
+                <a href="https://www.gourmaze.co/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/gourmaze.webp" alt="Gourmaze" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Gourmaze Platform</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Interactive Web App</span>
+                        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 6: Davinsure -->
+                <a href="https://davinsure.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/davin.webp" alt="Davin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Davinsure Enterprise</h3>
+                            <span class="text-xs text-neutral-400 font-mono">High-Performance Build</span>
+                        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 7: Alliance Exteriors -->
+                <a href="https://www.allianceexteriors.ca/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/alliance.webp" alt="Alliance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Alliance Exteriors</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Database &amp; Migration</span>
+                        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
             </div>
 
             <!-- ROW 2: Scrolling Right -->
-            <div class="marquee-track-container" id="marqueeContainer2">
-                <div class="marquee-track" id="marqueeTrack2">
-                    <a href="https://www.turquoiselaw.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block" data-image="images/turquise mobile-ver.webp">
-                        <img src="images/turquoise-law.webp" alt="Turquoise Law" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                            <div>
-                                <h3 class="text-xl font-normal text-white">Turquoise Law</h3>
-                                <span class="text-xs text-neutral-400 font-mono">Modern UX &amp; Branding</span>
-                            </div>
-                            <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+            <div class="flex marquee-row-2">
+                <!-- Card 8: Turquoise Law -->
+                <a href="https://www.turquoiselaw.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/turquoise-law.webp" alt="Turquoise Law" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Turquoise Law</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Modern UX &amp; Branding</span>
                         </div>
-                    </a>
-                    <a href="https://www.bremmethod.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block" data-image="images/brem mobile-ver.webp">
-                        <img src="images/brem.webp" alt="Brem" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                            <div>
-                                <h3 class="text-xl font-normal text-white">Brem Method</h3>
-                                <span class="text-xs text-neutral-400 font-mono">Infrastructure &amp; Speed</span>
-                            </div>
-                            <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
 
-        <div class="wave-preview-wrapper">
-            <div class="wave-preview-inner">
-                <img src="" alt="Mobile Preview" class="wave-preview-img" />
+                <!-- Card 9: Brem Method -->
+                <a href="https://www.bremmethod.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/brem.webp" alt="Brem" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Brem Method</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Infrastructure &amp; Speed</span>
+                        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 10: Atrium Music -->
+                <a href="https://www.atriummusic.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/atrium.webp" alt="Atrium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Atrium Music</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Real Estate &amp; Audio UI</span>
+                        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 11: Vizcom Contracting -->
+                <a href="https://vizcomcontracting.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/vizcom.webp" alt="Vizcom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Vizcom Contracting</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Interactive Visual Design</span>
+                        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 12: Stone Care Arizona -->
+                <a href="https://www.stonecareofarizona.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/stone-care.webp" alt="Stone Care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Stone Care Arizona</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Conversion Optimization</span>
+                        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 13: LJ's Cleaning Solutions -->
+                <a href="https://ljscleaningsolutions.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/lj.webp" alt="LJ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">LJ’s Solutions</h3>
+                            <span class="text-xs text-neutral-400 font-mono">Full-Stack Development</span>
+                        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
+
+                <!-- Card 14: Source and Recruit -->
+                <a href="https://www.sourceandrecruit.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[320px] md:min-w-[420px] h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-3 block">
+                    <img src="images/soruce.webp" alt="Source" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Source &amp; Recruit</h3>
+                            <span class="text-xs text-neutral-400 font-mono">API &amp; System Integration</span>
+                        </div>
+                        <span class="text-xs bg-white text-black px-3 py-1.5 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Visit &nearr;</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT US SECTION -->
     <section id="about" class="py-24 border-t border-neutral-800 bg-neutral-900/40">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -199,148 +325,415 @@
                     <p class="text-neutral-400 font-light leading-relaxed mb-6">
                         For nearly a decade, I’ve operated at the intersection of stunning design and rock-solid technical execution. Whether migrating complex infrastructures, optimizing Core Web Vitals, or engineering high-end interactive layouts, my work bridges the gap between creative vision and scalable architecture.
                     </p>
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-neutral-800">
+                        <div>
+                            <span class="block text-3xl font-light text-white mb-1">8+</span>
+                            <span class="text-xs uppercase tracking-wider text-neutral-500">Years Experience</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-light text-white mb-1">100+</span>
+                            <span class="text-xs uppercase tracking-wider text-neutral-500">Projects Delivered</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-800">
+                    <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-800 shadow-sm">
                         <span class="text-[#d83a3a] font-mono text-xs block mb-2">01 / EXPERTISE</span>
-                        <h3 class="text-lg font-medium mb-2 text-white">Advanced CMS &amp; Frameworks</h3>
+                        <h3 class="text-lg font-medium mb-2 text-white">Advanced CMS & Frameworks</h3>
                         <p class="text-sm text-neutral-400 font-light">Deep mastery over WordPress ecosystem, Elementor Pro, Divi, custom PHP functions, and high-tier hosting like SiteGround and Kinsta.</p>
                     </div>
-                    <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-800">
+                    <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-800 shadow-sm">
                         <span class="text-[#d83a3a] font-mono text-xs block mb-2">02 / PERFORMANCE</span>
-                        <h3 class="text-lg font-medium mb-2 text-white">Speed &amp; Core Web Vitals</h3>
+                        <h3 class="text-lg font-medium mb-2 text-white">Speed & Core Web Vitals</h3>
                         <p class="text-sm text-neutral-400 font-light">Obsessive optimization balancing rich cinematic UI/UX features with lightning-fast mobile loading and render-efficiency.</p>
+                    </div>
+                    <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-800 shadow-sm">
+                        <span class="text-[#d83a3a] font-mono text-xs block mb-2">03 / DESIGN INTENT</span>
+                        <h3 class="text-lg font-medium mb-2 text-white">Luxury & Cinematic UX</h3>
+                        <p class="text-sm text-neutral-400 font-light">Designing immersive web components inspired by world-class brand aesthetic standards and interactive layouts.</p>
+                    </div>
+                    <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-800 shadow-sm">
+                        <span class="text-[#d83a3a] font-mono text-xs block mb-2">04 / STRATEGY</span>
+                        <h3 class="text-lg font-medium mb-2 text-white">SEO & Architecture</h3>
+                        <p class="text-sm text-neutral-400 font-light">Technical SEO foundation integrated natively into every line of code to secure long-term organic visibility.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- STICKY TIMELINE WORK EXPERIENCE SECTION -->
-    <section id="experience" class="py-24 border-t border-neutral-800 relative experience-sticky-container">
+    <!-- STICKY TIMELINE WORK EXPERIENCE SECTION WITH SCROLL-FILL LINE EFFECT -->
+    <section id="experience" class="py-24 border-t border-neutral-800 relative">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16">
-                <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">Career History</span>
-                <h2 class="text-3xl md:text-5xl font-light tracking-tight">EXPERIENCE TIMELINE</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- LEFT COLUMN: Sticky Header & Static Summary/Badge -->
+                <div class="lg:col-span-5 lg:sticky lg:top-32 pt-4">
+                    <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-3">/Career Path</span>
+                    <h2 class="text-4xl md:text-5xl font-light tracking-tight mb-6 leading-tight">
+                        Professional Journey &amp; Experience
+                    </h2>
+                    <p class="text-neutral-400 font-light text-base leading-relaxed mb-8">
+                        A chronological breakdown of my multi-year evolution engineering high-end WordPress platforms, database infrastructures, and conversion-focused web architectures.
+                    </p>
+
+                    <!-- Stat / Visual Callout Box matching Halo Turf vibe -->
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 mb-8 hidden lg:block">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-[#d83a3a]/20 text-[#d83a3a] flex items-center justify-center font-bold text-sm">8+</div>
+                            <div>
+                                <h4 class="text-sm font-medium text-white">Years of Continuous Impact</h4>
+                                <span class="text-xs text-neutral-400 font-mono">Full-Stack &amp; WordPress Specialist</span>
+                            </div>
+                        </div>
+                        <div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-[#d83a3a] h-full w-full"></div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="inline-flex items-center space-x-2 bg-white text-black px-7 py-4 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-neutral-200 transition-all">
+                        <span>Work With Me</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- RIGHT COLUMN: Scrolling Cards Timeline with Scroll-Fill Color Line -->
+                <div class="lg:col-span-7 relative experience-sticky-container">
+                    <!-- Background Dark Track Line -->
+                    <div class="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-neutral-800 hidden sm:block"></div>
+                    <!-- Dynamic Active Scroll Fill Line -->
+                    <div id="timeline-progress-line" class="absolute left-4 md:left-8 top-0 w-0.5 bg-[#22c55e] hidden sm:block transition-all duration-100 ease-out" style="height: 0%;"></div>
+
+                    <div class="space-y-8 sm:pl-12">
+                        
+                        <!-- Experience Card 1 -->
+                        <div class="experience-pin-card relative bg-neutral-900 border border-neutral-800 p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-500 hover:border-neutral-700">
+                            <!-- Timeline node dot -->
+                            <div class="timeline-dot absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-neutral-700 border-4 border-[#0b0b0b] transition-colors duration-300 hidden sm:block"></div>
+                            
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2019 — 2020</span>
+                                <span class="text-xs text-neutral-500 font-mono">Foundational Era</span>
+                            </div>
+                            <h3 class="text-2xl font-normal text-white mb-2">The Kwak Brothers</h3>
+                            <h4 class="text-sm font-medium text-[#d83a3a] mb-4">WordPress Developer / Designer</h4>
+                            <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
+                                Developing and maintaining the website front-end &amp; backend, from coding pages from the ground up to ongoing upkeep, fixing Google Search Console issues, driving SEO initiatives, configuring Google Analytics, establishing mailing lists, setting up WooCommerce product pages, implementing e-commerce and funnel platforms such as Shopify, ClickFunnels, and GoHighLevel, and leading full-site redesigns.
+                            </p>
+                        </div>
+
+                        <!-- Experience Card 2 -->
+                        <div class="experience-pin-card relative bg-neutral-900 border border-neutral-800 p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-500 hover:border-neutral-700">
+                            <!-- Timeline node dot -->
+                            <div class="timeline-dot absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-neutral-700 border-4 border-[#0b0b0b] transition-colors duration-300 hidden sm:block"></div>
+                            
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2020 — 2022</span>
+                                <span class="text-xs text-neutral-500 font-mono">Agency Scaling</span>
+                            </div>
+                            <h3 class="text-2xl font-normal text-white mb-2">Sher Agency</h3>
+                            <h4 class="text-sm font-medium text-[#d83a3a] mb-4">Website Developer</h4>
+                            <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
+                                Responsible for end-to-end website support: integrating databases and servers, building pages from scratch, performing ongoing maintenance, fixing Google Search Console issues, delivering SEO improvements, configuring Google Analytics, setting up mailing lists and WooCommerce product pages, and executing full-site redesigns.
+                            </p>
+                        </div>
+
+                        <!-- Experience Card 3 -->
+                        <div class="experience-pin-card relative bg-neutral-900 border border-neutral-800 p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-500 hover:border-neutral-700">
+                            <!-- Timeline node dot -->
+                            <div class="timeline-dot absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-neutral-700 border-4 border-[#0b0b0b] transition-colors duration-300 hidden sm:block"></div>
+                            
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2022 — 2026</span>
+                                <span class="text-xs text-neutral-500 font-mono">Senior Leadership</span>
+                            </div>
+                            <h3 class="text-2xl font-normal text-white mb-2">Networld Online</h3>
+                            <h4 class="text-sm font-medium text-[#d83a3a] mb-4">WordPress Designer / Developer</h4>
+                            <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
+                                WordPress developer who builds custom pages from the ground up, keeps sites running smoothly, fixes Google Search Console errors, drives search-engine optimization, implements Google Analytics, sets up mailing lists and WooCommerce product pages, refreshes site designs, crafts bespoke themes and plugins, and troubleshoots any content-related issues.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="relative pl-8 md:pl-12 border-l border-neutral-800 space-y-12">
-                <!-- Vertical Progress Line -->
-                <div class="absolute left-0 top-0 w-[2px] bg-neutral-800 h-full">
-                    <div id="timeline-progress-line" class="absolute top-0 left-0 w-full bg-emerald-500 transition-all duration-150" style="height: 0%;"></div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & CREDENTIALS SECTION -->
+    <section class="py-24 border-t border-neutral-800 bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">/Academic &amp; Training</span>
+                <h2 class="text-3xl md:text-5xl font-light tracking-tight">Education &amp; Certifications</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Edu 1 -->
+                <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-[#22c55e] bg-[#22c55e]/10 px-3 py-1 rounded-full inline-block mb-4">2015 — 2019</span>
+                        <h3 class="text-xl font-normal text-white mb-2">Holy Cross of Davao College</h3>
+                        <p class="text-sm text-neutral-400 font-light">Bachelor of Science in Information Technology</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-neutral-800 text-xs text-neutral-500 font-mono">
+                        Degree Completed
+                    </div>
                 </div>
 
-                <!-- Card 1 -->
-                <div class="experience-pin-card relative bg-neutral-900/80 backdrop-blur-md p-8 rounded-2xl border border-neutral-800">
-                    <div class="absolute -left-[37px] md:-left-[53px] top-8 w-4 h-4 rounded-full bg-neutral-700 timeline-dot border-4 border-[#0b0b0b] transition-colors duration-300"></div>
-                    <span class="text-xs font-mono text-neutral-400 mb-2 block">2025 – Present</span>
-                    <h3 class="text-xl font-medium text-white mb-2">Senior Website Developer &amp; SEO Specialist</h3>
-                    <p class="text-neutral-400 font-light text-sm leading-relaxed">
-                        Leading advanced WordPress builds, custom frontend interactions, and rigorous Core Web Vitals optimizations across multiple high-traffic client platforms.
-                    </p>
+                <!-- Edu 2 -->
+                <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-[#22c55e] bg-[#22c55e]/10 px-3 py-1 rounded-full inline-block mb-4">2019 — 2020</span>
+                        <h3 class="text-xl font-normal text-white mb-2">School of Virtual Assistance (SOVA)</h3>
+                        <p class="text-sm text-neutral-400 font-light">Web Development Bootcamp</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-neutral-800 text-xs text-neutral-500 font-mono">
+                        Intensive Training
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="experience-pin-card relative bg-neutral-900/80 backdrop-blur-md p-8 rounded-2xl border border-neutral-800">
-                    <div class="absolute -left-[37px] md:-left-[53px] top-8 w-4 h-4 rounded-full bg-neutral-700 timeline-dot border-4 border-[#0b0b0b] transition-colors duration-300"></div>
-                    <span class="text-xs font-mono text-neutral-400 mb-2 block">2023 – 2025</span>
-                    <h3 class="text-xl font-medium text-white mb-2">Lead UI/UX &amp; WordPress Architect</h3>
-                    <p class="text-neutral-400 font-light text-sm leading-relaxed">
-                        Engineered cinematic brand experiences, custom CSS frameworks, and seamless server migrations from staging to high-performance hosts like SiteGround and Kinsta.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="experience-pin-card relative bg-neutral-900/80 backdrop-blur-md p-8 rounded-2xl border border-neutral-800">
-                    <div class="absolute -left-[37px] md:-left-[53px] top-8 w-4 h-4 rounded-full bg-neutral-700 timeline-dot border-4 border-[#0b0b0b] transition-colors duration-300"></div>
-                    <span class="text-xs font-mono text-neutral-400 mb-2 block">2018 – 2023</span>
-                    <h3 class="text-xl font-medium text-white mb-2">Web Developer &amp; Technical Consultant</h3>
-                    <p class="text-neutral-400 font-light text-sm leading-relaxed">
-                        Built and maintained over 100 client websites, implementing custom post types, responsive layouts, and robust e-commerce solutions.
-                    </p>
+                <!-- Edu 3 -->
+                <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-[#22c55e] bg-[#22c55e]/10 px-3 py-1 rounded-full inline-block mb-4">2020</span>
+                        <h3 class="text-xl font-normal text-white mb-2">WordPress Training &amp; Seminars</h3>
+                        <p class="text-sm text-neutral-400 font-light">WordPress Development Training</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-neutral-800 text-xs text-neutral-500 font-mono">
+                        Specialized Seminar
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- TESTIMONIALS SLIDER SECTION -->
-    <section id="testimonials" class="py-24 border-t border-neutral-800 overflow-hidden bg-neutral-900/20">
-        <div class="max-w-7xl mx-auto px-6 mb-12 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
+    <section id="testimonials" class="py-24 border-t border-neutral-800 bg-neutral-900/40 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between">
             <div>
-                <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">Client Feedback</span>
-                <h2 class="text-3xl md:text-5xl font-light tracking-tight">TESTIMONIALS</h2>
+                <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">Social Proof</span>
+                <h2 class="text-3xl md:text-5xl font-light tracking-tight">Client Testimonials</h2>
             </div>
-            <div class="flex items-center space-x-3">
-                <button id="testimonial-prev" class="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center hover:bg-white hover:text-black transition-colors" aria-label="Previous slide">&larr;</button>
-                <button id="testimonial-next" class="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center hover:bg-white hover:text-black transition-colors" aria-label="Next slide">&rarr;</button>
+            <!-- Slider Navigation Arrows -->
+            <div class="flex items-center space-x-3 mt-6 md:mt-0">
+                <button id="testimonial-prev" aria-label="Previous Testimonial" class="w-12 h-12 rounded-full border border-neutral-700 bg-neutral-900 text-white flex items-center justify-center hover:border-white hover:bg-neutral-800 transition-all cursor-pointer">
+                    &larr;
+                </button>
+                <button id="testimonial-next" aria-label="Next Testimonial" class="w-12 h-12 rounded-full border border-neutral-700 bg-neutral-900 text-white flex items-center justify-center hover:border-white hover:bg-neutral-800 transition-all cursor-pointer">
+                    &rarr;
+                </button>
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 overflow-hidden">
-            <div id="testimonial-track" class="flex gap-6 transition-transform duration-700 ease-out">
-                <!-- Testimonial 1 -->
-                <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-neutral-900 border border-neutral-800 p-8 rounded-2xl flex flex-col justify-between flex-shrink-0">
-                    <p class="text-neutral-300 font-light text-base mb-8 leading-relaxed">
-                        &ldquo;Ian's attention to detail and ability to execute high-end interactive UI elements transformed our platform completely. Absolute professional.&rdquo;
-                    </p>
-                    <div>
-                        <h4 class="text-white font-medium">Oscar Gutierrez</h4>
-                        <span class="text-xs text-neutral-500 font-mono">Project Director</span>
+        <!-- Testimonial Slider Track Container -->
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="testimonial-slider-container overflow-hidden">
+                <div id="testimonial-track" class="flex transition-transform duration-700 ease-out -mx-4">
+                    
+                    <!-- Testimonial 1: Halo Turf -->
+                    <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex space-x-1 text-[#d83a3a] mb-6">
+                                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                </div>
+                                <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                    &ldquo;Working with Ian on our custom product carousels and interactive layouts for Halo Turf completely elevated our brand presentation. Clean code and great aesthetic sensibilities.&rdquo;
+                                </p>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-[#d83a3a] text-white font-semibold flex items-center justify-center text-sm">HT</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">Halo Turf Team</h4>
+                                    <span class="text-xs text-neutral-500">Digital Marketing Director</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-neutral-900 border border-neutral-800 p-8 rounded-2xl flex flex-col justify-between flex-shrink-0">
-                    <p class="text-neutral-300 font-light text-base mb-8 leading-relaxed">
-                        &ldquo;Our site speed and Core Web Vitals skyrocketed after Ian optimized our infrastructure. His technical grasp of WordPress is world-class.&rdquo;
-                    </p>
-                    <div>
-                        <h4 class="text-white font-medium">Nor-Ain G</h4>
-                        <span class="text-xs text-neutral-500 font-mono">Operations Lead</span>
+
+                    <!-- Testimonial 2: Maggy Maid -->
+                    <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex space-x-1 text-[#d83a3a] mb-6">
+                                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                </div>
+                                <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                    &ldquo;Ian handled our massive Maggy Maid site migration onto SiteGround with incredible precision. His technical depth and attention to performance saved us countless hours of downtime.&rdquo;
+                                </p>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-white text-black font-semibold flex items-center justify-center text-sm">MM</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">Maggy Maid Team</h4>
+                                    <span class="text-xs text-neutral-500">Operations Lead</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-neutral-900 border border-neutral-800 p-8 rounded-2xl flex flex-col justify-between flex-shrink-0">
-                    <p class="text-neutral-300 font-light text-base mb-8 leading-relaxed">
-                        &ldquo;From database migrations to custom CSS styling, Ian delivered clean, robust code on schedule every single time.&rdquo;
-                    </p>
-                    <div>
-                        <h4 class="text-white font-medium">Steve M.</h4>
-                        <span class="text-xs text-neutral-500 font-mono">Agency Partner</span>
+
+                    <!-- Testimonial 3: All Faze Electric -->
+                    <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex space-x-1 text-[#d83a3a] mb-6">
+                                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                </div>
+                                <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                    &ldquo;Ian’s speed optimization and brand architecture updates for All Faze Electric delivered immediate mobile performance results. Highly reliable, communicative, and detail-oriented.&rdquo;
+                                </p>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-neutral-800 text-white font-semibold flex items-center justify-center text-sm">AF</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">All Faze Stakeholder</h4>
+                                    <span class="text-xs text-neutral-500">Company Executive</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Testimonial 4 -->
-                <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-neutral-900 border border-neutral-800 p-8 rounded-2xl flex flex-col justify-between flex-shrink-0">
-                    <p class="text-neutral-300 font-light text-base mb-8 leading-relaxed">
-                        &ldquo;The luxury cinematic aesthetic he built for our brand exceeded all expectations. Exceptional communication and skill.&rdquo;
-                    </p>
-                    <div>
-                        <h4 class="text-white font-medium">Eli R.</h4>
-                        <span class="text-xs text-neutral-500 font-mono">Creative Director</span>
+
+                    <!-- Testimonial 4: Poulter Law -->
+                    <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex space-x-1 text-[#d83a3a] mb-6">
+                                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                </div>
+                                <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                    &ldquo;The legal corporate platform Ian built for Poulter Law exudes high-end professionalism and clean navigation. Clients constantly compliment the seamless layout.&rdquo;
+                                </p>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-neutral-700 text-white font-semibold flex items-center justify-center text-sm">PL</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">Poulter Law Group</h4>
+                                    <span class="text-xs text-neutral-500">Managing Partner</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Testimonial 5: Luxury Window Coverings -->
+                    <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex space-x-1 text-[#d83a3a] mb-6">
+                                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                </div>
+                                <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                    &ldquo;For Luxury Window Coverings, Ian delivered a cinematic user interface that aligns perfectly with elite design aesthetics. Exceptional frontend execution.&rdquo;
+                                </p>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-neutral-800 text-white font-semibold flex items-center justify-center text-sm">LW</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">Luxury Window Coverings</h4>
+                                    <span class="text-xs text-neutral-500">Brand Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6: LJ's Cleaning Solutions -->
+                    <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex space-x-1 text-[#d83a3a] mb-6">
+                                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                </div>
+                                <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                    &ldquo;Ian's full-stack optimization and structural updates for LJ's Solutions transformed our booking funnel conversion rate. Truly a master of his craft.&rdquo;
+                                </p>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-neutral-700 text-white font-semibold flex items-center justify-center text-sm">LJ</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">LJ's Solutions Team</h4>
+                                    <span class="text-xs text-neutral-500">Founder &amp; Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 7: Turquoise Law -->
+                    <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex space-x-1 text-[#d83a3a] mb-6">
+                                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                </div>
+                                <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                    &ldquo;Turquoise Law's modern layout and reliable responsiveness improved dramatically under Ian's guidance. Absolute professional execution from start to finish.&rdquo;
+                                </p>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-neutral-800 text-white font-semibold flex items-center justify-center text-sm">TL</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">Turquoise Law Team</h4>
+                                    <span class="text-xs text-neutral-500">Senior Associate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 8: Brem Method -->
+                    <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex space-x-1 text-[#d83a3a] mb-6">
+                                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                </div>
+                                <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                    &ldquo;The server speed improvements and infrastructural tune-ups Ian performed for Brem Method resulted in lightning-fast load times. Highly recommended developer.&rdquo;
+                                </p>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-neutral-700 text-white font-semibold flex items-center justify-center text-sm">BM</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">Brem Method Team</h4>
+                                    <span class="text-xs text-neutral-500">Program Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT / FOOTER SECTION -->
-    <footer id="contact" class="py-24 border-t border-neutral-800 bg-neutral-900/60 text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-3">Get In Touch</span>
-            <h2 class="text-4xl md:text-6xl font-light tracking-tight mb-6">Let's build something exceptional together.</h2>
-            <p class="text-neutral-400 font-light text-lg mb-10 max-w-xl mx-auto">
-                Currently available for senior web development contracts, WordPress architecture, and high-performance optimizations.
-            </p>
-            <a href="mailto:ian@example.com" class="inline-block bg-white text-black px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-neutral-200 transition-all">
-                iancarlo@casilad.dev
-            </a>
-            <div class="mt-20 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row justify-between items-center text-xs text-neutral-500 font-mono">
-                <span>&copy; 2026 Ian Carlo Casilad. All Rights Reserved.</span>
-                <span class="mt-4 sm:mt-0">Crafted with precision &amp; high performance.</span>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="bg-black text-white py-24 px-6 border-t border-neutral-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">Get in Touch</span>
+                <h2 class="text-3xl md:text-5xl font-light tracking-tight mb-6">Let's build something exceptional together.</h2>
+                <a href="mailto:ian.casilad.dev@gmail.com" class="inline-block text-lg font-medium border-b border-white pb-1 hover:text-[#d83a3a] hover:border-[#d83a3a] transition-colors">
+                    ian.casilad.dev@gmail.com
+                </a>
+            </div>
+            <div class="flex flex-col justify-between">
+                <div class="grid grid-cols-2 gap-8 text-sm text-neutral-400">
+                    <div>
+                        <strong class="text-white block mb-3 font-medium uppercase tracking-wider text-xs">Availability</strong>
+                        <p class="mb-2">Open for Freelance &amp; Contract Work</p>
+                        <p>Timezone: PHT (UTC+8)</p>
+                    </div>
+                </div>
+                <div class="mt-12 pt-8 border-t border-neutral-800 text-xs text-neutral-500 flex justify-between">
+                    <p>&copy; 2026 Ian Carlo Casilad. All Rights Reserved.</p>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- External JavaScript Files -->
-    <script src="script.js"></script>
+    <!-- Script File with Sticky Scroll Pinning, Timeline Progress & Testimonial Slider Logic -->
+    <script src="script.js" defer></script>
 </body>
 </html>
