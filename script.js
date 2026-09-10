@@ -1,4 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Matrix Code Rain Background Animation
+    const canvas = document.getElementById('matrix-canvas');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const characters = 'アカサタナハマヤラワイキシチニヒミリウクスツヌフムユルエケセテネヘメレオコソトノホモヨロ01234789<>/-+*+=[]{}';
+        const fontSize = 14;
+        let columns = Math.floor(canvas.width / fontSize);
+        let drops = [];
+
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(11, 11, 11, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#22c55e'; // Matrix green color
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = characters.charAt(Math.floor(Math.random() * characters.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 33);
+    }
+
     // Mobile Menu Toggle Functionality
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -26,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = experienceContainer.getBoundingClientRect();
             const windowHeight = window.innerHeight;
             
-            // Check if the container is currently in view
             if (rect.top <= windowHeight * 0.5 && rect.bottom >= windowHeight * 0.5) {
                 const scrollDistance = windowHeight * 0.5 - rect.top;
                 const containerHeight = experienceContainer.offsetHeight - windowHeight;
@@ -55,11 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             } else if (rect.top > windowHeight * 0.5) {
-                // Before section comes into view
                 experienceCards.forEach((card) => card.classList.remove('active'));
                 timelineDots.forEach((dot) => dot.classList.remove('active'));
             } else if (rect.bottom < windowHeight * 0.5) {
-                // After section has passed
                 experienceCards.forEach((card) => card.classList.add('active'));
                 timelineDots.forEach((dot) => dot.classList.add('active'));
             }
@@ -67,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.addEventListener('scroll', handleScrollPinning, { passive: true });
         window.addEventListener('resize', handleScrollPinning);
-        handleScrollPinning(); // Trigger once on load
+        handleScrollPinning();
     }
 
     // Testimonials Carousel Logic
