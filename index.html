@@ -70,7 +70,7 @@
                 </a>
                 
                 <!-- Mobile Menu Button -->
-                <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-neutral-400 hover:text-white focus:outline-none p-2">
+                <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-neutral-400 hover:text-white focus:outline-none p-2 relative z-50">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -79,13 +79,13 @@
         </div>
 
         <!-- Mobile Navigation Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-b border-neutral-800 px-6 py-6 space-y-4">
-            <a href="#about" class="block text-base font-medium text-neutral-300 hover:text-white mobile-link">About</a>
-            <a href="#works" class="block text-base font-medium text-neutral-300 hover:text-white mobile-link">Featured Works</a>
-            <a href="#experience" class="block text-base font-medium text-neutral-300 hover:text-white mobile-link">Experience</a>
-            <a href="#testimonials" class="block text-base font-medium text-neutral-300 hover:text-white mobile-link">Testimonials</a>
+        <div id="mobile-menu" class="hidden fixed inset-x-0 top-20 bg-neutral-900/95 backdrop-blur-xl border-b border-neutral-800 px-6 py-8 space-y-5 md:hidden shadow-2xl z-40">
+            <a href="#about" class="block text-lg font-medium text-neutral-300 hover:text-white mobile-link">About</a>
+            <a href="#works" class="block text-lg font-medium text-neutral-300 hover:text-white mobile-link">Featured Works</a>
+            <a href="#experience" class="block text-lg font-medium text-neutral-300 hover:text-white mobile-link">Experience</a>
+            <a href="#testimonials" class="block text-lg font-medium text-neutral-300 hover:text-white mobile-link">Testimonials</a>
             <div class="pt-4 border-t border-neutral-800">
-                <a href="#contact" class="mobile-link block text-center text-xs font-semibold uppercase tracking-wider bg-white text-black px-5 py-3 rounded-full hover:bg-neutral-200 transition-colors">
+                <a href="#contact" class="mobile-link block text-center text-xs font-semibold uppercase tracking-wider bg-white text-black px-5 py-3.5 rounded-full hover:bg-neutral-200 transition-colors">
                     Let's Talk
                 </a>
             </div>
@@ -155,8 +155,8 @@
         <div class="relative w-full overflow-hidden carousel-wrapper">
             <div class="flex marquee-row-1 mb-6">
                 <a href="https://haloturfcustommats.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/halo.webp" alt="Halo Turf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/halo.webp" alt="Halo Turf">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Halo Turf Showcase</h3>
@@ -167,8 +167,8 @@
                 </a>
 
                 <a href="https://allfazeelectric.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/allfaze.webp" alt="All Faze Electric" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/allfaze.webp" alt="All Faze Electric">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">All Faze Electric</h3>
@@ -179,8 +179,8 @@
                 </a>
 
                 <a href="https://poulter.law/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/Pouler-Law.webp" alt="Pouler Law" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/Pouler-Law.webp" alt="Pouler Law">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Poulter Law Group</h3>
@@ -191,8 +191,8 @@
                 </a>
 
                 <a href="https://luxurywindowcoverings.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/lux.webp" alt="Lux" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/lux.webp" alt="Lux">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Luxury Window Coverings</h3>
@@ -203,8 +203,8 @@
                 </a>
 
                 <a href="https://www.gourmaze.co/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/gourmaze.webp" alt="Gourmaze" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/gourmaze.webp" alt="Gourmaze">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Gourmaze Platform</h3>
@@ -215,8 +215,8 @@
                 </a>
 
                 <a href="https://davinsure.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/davin.webp" alt="Davin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/davin.webp" alt="Davin">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Davinsure Enterprise</h3>
@@ -227,8 +227,8 @@
                 </a>
 
                 <a href="https://www.allianceexteriors.ca/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/alliance.webp" alt="Alliance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/alliance.webp" alt="Alliance">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Alliance Exteriors</h3>
@@ -241,8 +241,8 @@
 
             <div class="flex marquee-row-2">
                 <a href="https://www.turquoiselaw.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/turquoise-law.webp" alt="Turquoise Law" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/turquoise-law.webp" alt="Turquoise Law">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Turquoise Law</h3>
@@ -253,8 +253,8 @@
                 </a>
 
                 <a href="https://www.bremmethod.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/brem.webp" alt="Brem" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/brem.webp" alt="Brem">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Brem Method</h3>
@@ -265,8 +265,8 @@
                 </a>
 
                 <a href="https://www.atriummusic.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/atrium.webp" alt="Atrium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/atrium.webp" alt="Atrium">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Atrium Music</h3>
@@ -277,8 +277,8 @@
                 </a>
 
                 <a href="https://vizcomcontracting.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/vizcom.webp" alt="Vizcom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/vizcom.webp" alt="Vizcom">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Vizcom Contracting</h3>
@@ -289,8 +289,8 @@
                 </a>
 
                 <a href="https://www.stonecareofarizona.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/stone-care.webp" alt="Stone Care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/stone-care.webp" alt="Stone Care">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Stone Care Arizona</h3>
@@ -301,8 +301,8 @@
                 </a>
 
                 <a href="https://ljscleaningsolutions.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/lj.webp" alt="LJ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/lj.webp" alt="LJ">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">LJ’s Solutions</h3>
@@ -313,8 +313,8 @@
                 </a>
 
                 <a href="https://www.sourceandrecruit.com/" target="_blank" rel="noopener noreferrer" class="project-card group relative min-w-[280px] sm:min-w-[320px] md:min-w-[420px] h-[260px] sm:h-[300px] md:h-[380px] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 flex-shrink-0 cursor-pointer mx-2 sm:mx-3 block">
-                    <img src="images/soruce.webp" alt="Source" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                    <img src="images/soruce.webp" alt="Source">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex justify-between items-end">
                         <div>
                             <h3 class="text-lg sm:text-xl font-normal text-white group-hover:translate-x-1 transition-transform">Source &amp; Recruit</h3>
