@@ -465,51 +465,125 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
-    <section id="testimonials" class="py-24 border-t border-neutral-800 bg-neutral-900/40">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-                <div>
-                    <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">Social Proof</span>
-                    <h2 class="text-3xl md:text-5xl font-light tracking-tight">Client Testimonials</h2>
-                </div>
+    <!-- TESTIMONIALS SLIDER SECTION -->
+    <section id="testimonials" class="py-24 border-t border-neutral-800 bg-neutral-900/40 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between">
+            <div>
+                <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">Social Proof</span>
+                <h2 class="text-3xl md:text-5xl font-light tracking-tight">Client Testimonials</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
-                    <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
-                        &ldquo;Ian handled our massive site migration onto SiteGround with incredible precision. His technical depth and attention to performance saved us countless hours of downtime.&rdquo;
-                    </p>
-                    <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
-                        <div class="w-10 h-10 rounded-full bg-white text-black font-semibold flex items-center justify-center text-sm">MM</div>
-                        <div>
-                            <h4 class="text-sm font-medium text-white">Maggy Maid Team</h4>
-                            <span class="text-xs text-neutral-500">Operations Lead</span>
+            <!-- Slider Navigation Arrows -->
+            <div class="flex items-center space-x-3 mt-6 md:mt-0">
+                <button id="testimonial-prev" aria-label="Previous Testimonial" class="w-12 h-12 rounded-full border border-neutral-700 bg-neutral-900 text-white flex items-center justify-center hover:border-white hover:bg-neutral-800 transition-all cursor-pointer">
+                    &larr;
+                </button>
+                <button id="testimonial-next" aria-label="Next Testimonial" class="w-12 h-12 rounded-full border border-neutral-700 bg-neutral-900 text-white flex items-center justify-center hover:border-white hover:bg-neutral-800 transition-all cursor-pointer">
+                    &rarr;
+                </button>
+            </div>
+        </div>
+
+        <!-- Testimonial Slider Track Container -->
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="testimonial-slider-container overflow-hidden">
+                <div id="testimonial-track" class="flex transition-transform duration-500 ease-out -mx-4">
+                    
+                    <!-- Testimonial 1: Halo Turf -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                &ldquo;Working with Ian on our custom product carousels and interactive layouts for Halo Turf completely elevated our brand presentation. Clean code and great aesthetic sensibilities.&rdquo;
+                            </p>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-[#d83a3a] text-white font-semibold flex items-center justify-center text-sm">HT</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">Halo Turf Team</h4>
+                                    <span class="text-xs text-neutral-500">Digital Marketing Director</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
-                    <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
-                        &ldquo;Working with Ian on our custom product carousels and interactive layouts completely elevated our brand presentation. Clean code and great aesthetic sensibilities.&rdquo;
-                    </p>
-                    <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
-                        <div class="w-10 h-10 rounded-full bg-[#d83a3a] text-white font-semibold flex items-center justify-center text-sm">HT</div>
-                        <div>
-                            <h4 class="text-sm font-medium text-white">Halo Turf Project Manager</h4>
-                            <span class="text-xs text-neutral-500">Digital Marketing Director</span>
+
+                    <!-- Testimonial 2: Maggy Maid -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                &ldquo;Ian handled our massive Maggy Maid site migration onto SiteGround with incredible precision. His technical depth and attention to performance saved us countless hours of downtime.&rdquo;
+                            </p>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-white text-black font-semibold flex items-center justify-center text-sm">MM</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">Maggy Maid Team</h4>
+                                    <span class="text-xs text-neutral-500">Operations Lead</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
-                    <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
-                        &ldquo;Ian’s speed optimization and technical updates delivered immediate results. Highly reliable, communicative, and detail-oriented.&rdquo;
-                    </p>
-                    <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
-                        <div class="w-10 h-10 rounded-full bg-neutral-800 text-white font-semibold flex items-center justify-center text-sm">AF</div>
-                        <div>
-                            <h4 class="text-sm font-medium text-white">All Faze Stakeholder</h4>
-                            <span class="text-xs text-neutral-500">Company Executive</span>
+
+                    <!-- Testimonial 3: All Faze Electric -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                &ldquo;Ian’s speed optimization and brand architecture updates for All Faze Electric delivered immediate mobile performance results. Highly reliable, communicative, and detail-oriented.&rdquo;
+                            </p>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-neutral-800 text-white font-semibold flex items-center justify-center text-sm">AF</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">All Faze Stakeholder</h4>
+                                    <span class="text-xs text-neutral-500">Company Executive</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Testimonial 4: Poulter Law -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                &ldquo;The legal corporate platform Ian built for Poulter Law exudes high-end professionalism and clean navigation. Clients constantly compliment the seamless layout.&rdquo;
+                            </p>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-neutral-700 text-white font-semibold flex items-center justify-center text-sm">PL</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">Poulter Law Group</h4>
+                                    <span class="text-xs text-neutral-500">Managing Partner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5: Luxury Window Coverings -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                &ldquo;For Luxury Window Coverings, Ian delivered a cinematic user interface that aligns perfectly with elite design aesthetics. Exceptional frontend execution.&rdquo;
+                            </p>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-neutral-800 text-white font-semibold flex items-center justify-center text-sm">LW</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">Luxury Window Coverings</h4>
+                                    <span class="text-xs text-neutral-500">Brand Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6: LJ's Cleaning Solutions -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0">
+                        <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between h-full">
+                            <p class="text-neutral-300 font-light text-base leading-relaxed mb-8">
+                                &ldquo;Ian's full-stack optimization and structural updates for LJ's Solutions transformed our booking funnel conversion rate. Truly a master of his craft.&rdquo;
+                            </p>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-neutral-800">
+                                <div class="w-10 h-10 rounded-full bg-neutral-700 text-white font-semibold flex items-center justify-center text-sm">LJ</div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white">LJ's Solutions Team</h4>
+                                    <span class="text-xs text-neutral-500">Founder &amp; Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -540,7 +614,7 @@
         </div>
     </section>
 
-    <!-- Script File with Sticky Scroll Pinning & Timeline Line Progress Logic -->
+    <!-- Script File with Sticky Scroll Pinning, Timeline Progress & Testimonial Slider Logic -->
     <script src="script.js" defer></script>
 </body>
 </html>
