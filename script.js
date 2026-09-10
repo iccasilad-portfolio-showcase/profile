@@ -16,45 +16,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Interactive Experience Section Progress Line & Active Card Highlights
-    const experienceSection = document.getElementById('experience');
-    const progressLine = document.getElementById('timeline-progress-line');
+    // Pinned Timeline Scroll-Driven Sequential Card Reveal Logic
+    const experienceContainer = document.querySelector('.experience-pin-container');
     const experienceCards = document.querySelectorAll('.experience-pin-card');
+    const progressLine = document.getElementById('timeline-progress-line');
 
-    if (experienceSection && progressLine) {
+    if (experienceContainer && experienceCards.length > 0) {
         window.addEventListener('scroll', () => {
-            const rect = experienceSection.getBoundingClientRect();
-            const sectionHeight = experienceSection.offsetHeight;
+            const rect = experienceContainer.getBoundingClientRect();
+            const containerHeight = experienceContainer.offsetHeight;
             const windowHeight = window.innerHeight;
 
-            // Calculate how far we've scrolled into the experience section
-            let scrollPosition = windowHeight - rect.top;
-            let percentage = (scrollPosition / (sectionHeight + windowHeight)) * 140;
+            // Check if the container is currently occupying the viewport pin zone
+            if (rect.top <= 0 && rect.bottom >= windowHeight) {
+                // Calculate raw progress ratio (0 to 1) inside the tall container
+                const scrollDistance = -rect.top;
+                const maxScroll = containerHeight - windowHeight;
+                let progress = scrollDistance / maxScroll;
+                progress = Math.max(0, Math.min(1, progress));
 
-            if (percentage < 0) percentage = 0;
-            if (percentage > 100) percentage = 100;
-
-            progressLine.style.height = `${percentage}%`;
-
-            // Highlight cards based on viewport position
-            experienceCards.forEach(card => {
-                const cardRect = card.getBoundingClientRect();
-                const dot = card.querySelector('.timeline-dot');
-                
-                if (cardRect.top < windowHeight * 0.7 && cardRect.bottom > windowHeight * 0.2) {
-                    card.classList.add('border-neutral-500', 'bg-neutral-900/90');
-                    if (dot) {
-                        dot.classList.remove('bg-neutral-700');
-                        dot.classList.add('bg-[#22c55e]');
-                    }
-                } else {
-                    card.classList.remove('border-neutral-500', 'bg-neutral-900/90');
-                    if (dot) {
-                        dot.classList.remove('bg-[#22c55e]');
-                        dot.classList.add('bg-neutral-700');
-                    }
+                // Update vertical green progress line height percentage
+                if (progressLine) {
+                    progressLine.style.height = `${progress * 100}%`;
                 }
-            });
+
+                // Determine active index step based on total cards count
+                const totalCards = experienceCards.length;
+                const activeIndex = Math.min(
+                    Math.floor(progress * totalCards),
+                    totalCards - 1
+                );
+
+                // Apply active state classes sequentially
+                experienceCards.forEach((card, idx) => {
+                    if (idx === activeIndex) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
+            } else if (rect.top > 0) {
+                // Reset to state before entering section
+                experienceCards.forEach((card, idx) => {
+                    card.classList.remove('active');
+                });
+                if (progressLine) progressLine.style.height = '0%';
+            } else if (rect.bottom < windowHeight) {
+                // Lock to final card when scrolling past container bottom
+                experienceCards.forEach((card, idx) => {
+                    if (idx === experienceCards.length - 1) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
+                if (progressLine) progressLine.style.height = '100%';
+            }
         });
     }
 
