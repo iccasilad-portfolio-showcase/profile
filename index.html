@@ -394,11 +394,11 @@
         </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="py-16 md:py-24 border-t border-neutral-800 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-span-5 lg:sticky lg:top-32 pt-4">
+    <!-- EXPERIENCE SECTION WITH PINNED SCROLL EFFECT -->
+    <section id="experience" class="experience-pin-container py-16 md:py-24 border-t border-neutral-800 relative min-h-[300vh]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 sticky top-28 md:top-32 h-[calc(100vh-8rem)] flex flex-col justify-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center h-full">
+                <div class="lg:col-span-5 pt-4">
                     <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-3">/Career Path</span>
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight mb-6 leading-tight">Professional Journey &amp; Experience</h2>
                     <p class="text-neutral-400 font-light text-sm sm:text-base leading-relaxed mb-8">
@@ -416,18 +416,15 @@
                             <div class="bg-[#d83a3a] h-full w-full"></div>
                         </div>
                     </div>
-                    <a href="#contact" class="inline-flex items-center space-x-2 bg-white text-black px-7 py-4 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-neutral-200 transition-all">
-                        <span>Work With Me</span>
-                        <span>&rarr;</span>
-                    </a>
                 </div>
 
-                <div class="lg:col-span-7 relative experience-sticky-container">
+                <div class="lg:col-span-7 relative h-[420px] sm:h-[480px] flex items-center overflow-hidden">
                     <div class="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-neutral-800 hidden sm:block"></div>
-                    <div id="timeline-progress-line" class="absolute left-4 md:left-8 top-0 w-0.5 bg-[#22c55e] hidden sm:block transition-all duration-100 ease-out" style="height: 0%;"></div>
+                    <div id="timeline-progress-line" class="absolute left-4 md:left-8 top-0 w-0.5 bg-[#22c55e] hidden sm:block transition-all duration-300 ease-out" style="height: 0%;"></div>
 
-                    <div class="space-y-6 sm:space-y-8 sm:pl-12">
-                        <div class="experience-pin-card relative bg-neutral-900 border border-neutral-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-500 hover:border-neutral-700">
+                    <div class="relative w-full sm:pl-12 h-full">
+                        <!-- Card 1 -->
+                        <div class="experience-pin-card absolute inset-0 bg-neutral-900 border border-neutral-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-700 opacity-0 translate-y-12 pointer-events-none" data-index="0">
                             <div class="timeline-dot absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-neutral-700 border-4 border-[#0b0b0b] transition-colors duration-300 hidden sm:block"></div>
                             <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
                                 <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2019 — 2020</span>
@@ -436,11 +433,12 @@
                             <h3 class="text-xl sm:text-2xl font-normal text-white mb-2">The Kwak Brothers</h3>
                             <h4 class="text-sm font-medium text-[#d83a3a] mb-4">WordPress Developer / Designer</h4>
                             <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
-                                Developing and maintaining the website front-end &amp; backend, from coding pages from the ground up to ongoing upkeep, fixing Google Search Console issues, driving SEO initiatives, configuring Google Analytics, establishing mailing lists, setting up WooCommerce product pages, implementing e-commerce and funnel platforms such as Shopify, ClickFunnels, and GoHighLevel, and leading full-site redesigns.
+                                Developing and maintaining the website front-end &amp; backend, from coding pages from the ground up to ongoing upkeep, fixing Google Search Console issues, driving SEO initiatives, configuring Google Analytics, establishing mailing lists, setting up WooCommerce product pages, and leading full-site redesigns.
                             </p>
                         </div>
 
-                        <div class="experience-pin-card relative bg-neutral-900 border border-neutral-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-500 hover:border-neutral-700">
+                        <!-- Card 2 -->
+                        <div class="experience-pin-card absolute inset-0 bg-neutral-900 border border-neutral-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-700 opacity-0 translate-y-12 pointer-events-none" data-index="1">
                             <div class="timeline-dot absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-neutral-700 border-4 border-[#0b0b0b] transition-colors duration-300 hidden sm:block"></div>
                             <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
                                 <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2020 — 2022</span>
@@ -449,11 +447,12 @@
                             <h3 class="text-xl sm:text-2xl font-normal text-white mb-2">Sher Agency</h3>
                             <h4 class="text-sm font-medium text-[#d83a3a] mb-4">Website Developer</h4>
                             <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
-                                Responsible for end-to-end website support: integrating databases and servers, building pages from scratch, performing ongoing maintenance, fixing Google Search Console issues, delivering SEO improvements, configuring Google Analytics, setting up mailing lists and WooCommerce product pages, and executing full-site redesigns.
+                                Responsible for end-to-end website support: integrating databases and servers, building pages from scratch, performing ongoing maintenance, fixing Google Search Console issues, delivering SEO improvements, configuring Google Analytics, and executing full-site redesigns.
                             </p>
                         </div>
 
-                        <div class="experience-pin-card relative bg-neutral-900 border border-neutral-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-500 hover:border-neutral-700">
+                        <!-- Card 3 -->
+                        <div class="experience-pin-card absolute inset-0 bg-neutral-900 border border-neutral-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-700 opacity-0 translate-y-12 pointer-events-none" data-index="2">
                             <div class="timeline-dot absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-neutral-700 border-4 border-[#0b0b0b] transition-colors duration-300 hidden sm:block"></div>
                             <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
                                 <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2022 — 2026</span>
@@ -462,7 +461,7 @@
                             <h3 class="text-xl sm:text-2xl font-normal text-white mb-2">Networld Online</h3>
                             <h4 class="text-sm font-medium text-[#d83a3a] mb-4">WordPress Designer / Developer</h4>
                             <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
-                                WordPress developer who builds custom pages from the ground up, keeps sites running smoothly, fixes Google Search Console errors, drives search-engine optimization, implements Google Analytics, sets up mailing lists and WooCommerce product pages, refreshes site designs, crafts bespoke themes and plugins, and troubleshoots any content-related issues.
+                                WordPress developer who builds custom pages from the ground up, keeps sites running smoothly, fixes Google Search Console errors, drives search-engine optimization, implements Google Analytics, and crafts bespoke themes and plugins.
                             </p>
                         </div>
                     </div>
