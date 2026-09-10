@@ -83,7 +83,7 @@ body {
     box-shadow: 0 0 10px #22c55e;
 }
 
-/* Sticky Pinning Effect for Experience Section (Mimicking Halo Turf) */
+/* Sticky Pinning Effect for Experience Section */
 @media (min-width: 1024px) {
     .experience-pin-card {
         position: sticky;
