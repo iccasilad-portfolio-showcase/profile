@@ -29,6 +29,34 @@ body {
     background: #404040;
 }
 
+/* Floating Animations for Hero Badges */
+@keyframes floatBadge1 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes floatBadge2 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(12px) rotate(-1deg); }
+}
+
+@keyframes floatBadge3 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+.float-badge-1 {
+    animation: floatBadge1 5s ease-in-out infinite;
+}
+
+.float-badge-2 {
+    animation: floatBadge2 6s ease-in-out infinite;
+}
+
+.float-badge-3 {
+    animation: floatBadge3 4.5s ease-in-out infinite;
+}
+
 /* Dual Row Marquee Animation */
 @keyframes scrollLeft {
     0% { transform: translateX(0); }
