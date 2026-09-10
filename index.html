@@ -70,16 +70,14 @@
         </div>
     </section>
 
-    <!-- FEATURED WORKS CAROUSEL SECTION (Creativeans Dual-Row Looping Style Match) -->
+    <!-- FEATURED WORKS CAROUSEL SECTION -->
     <section id="works" class="py-24 border-t border-neutral-800 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 mb-16">
             <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">Portfolio Showcase</span>
             <h2 class="text-3xl md:text-5xl font-light tracking-tight">FEATURED WORKS</h2>
         </div>
 
-        <!-- Carousel Container with Fade Masks on Edges -->
         <div class="relative w-full overflow-hidden carousel-wrapper">
-            
             <!-- ROW 1: Scrolling Left -->
             <div class="flex marquee-row-1 mb-6">
                 <!-- Card 1: Halo Turf -->
@@ -267,7 +265,6 @@
                     </div>
                 </a>
             </div>
-
         </div>
     </section>
 
@@ -318,46 +315,148 @@
         </div>
     </section>
 
-    <!-- WORK EXPERIENCE SECTION -->
-    <section id="experience" class="py-24 border-t border-neutral-800">
+    <!-- STICKY TIMELINE WORK EXPERIENCE SECTION (Halo Turf Style Scroll Lock) -->
+    <section id="experience" class="py-24 border-t border-neutral-800 relative">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16">
-                <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">Career Track</span>
-                <h2 class="text-3xl md:text-5xl font-light tracking-tight">Work Experience</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- LEFT COLUMN: Sticky Header & Static Summary/Badge -->
+                <div class="lg:col-span-5 lg:sticky lg:top-32 pt-4">
+                    <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-3">/Career Path</span>
+                    <h2 class="text-4xl md:text-5xl font-light tracking-tight mb-6 leading-tight">
+                        Professional Journey &amp; Experience
+                    </h2>
+                    <p class="text-neutral-400 font-light text-base leading-relaxed mb-8">
+                        A chronological breakdown of my multi-year evolution engineering high-end WordPress platforms, database infrastructures, and conversion-focused web architectures.
+                    </p>
+
+                    <!-- Stat / Visual Callout Box matching Halo Turf vibe -->
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 mb-8 hidden lg:block">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-[#d83a3a]/20 text-[#d83a3a] flex items-center justify-center font-bold text-sm">8+</div>
+                            <div>
+                                <h4 class="text-sm font-medium text-white">Years of Continuous Impact</h4>
+                                <span class="text-xs text-neutral-400 font-mono">Full-Stack &amp; WordPress Specialist</span>
+                            </div>
+                        </div>
+                        <div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-[#d83a3a] h-full w-full"></div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="inline-flex items-center space-x-2 bg-white text-black px-7 py-4 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-neutral-200 transition-all">
+                        <span>Work With Me</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- RIGHT COLUMN: Scrolling Cards Timeline with Sticky Row-Lock Pinning -->
+                <div class="lg:col-span-7 relative experience-sticky-container">
+                    <!-- Vertical Accent Timeline Line -->
+                    <div class="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-neutral-800 hidden sm:block"></div>
+
+                    <div class="space-y-8 sm:pl-12">
+                        
+                        <!-- Experience Card 1 -->
+                        <div class="experience-pin-card relative bg-neutral-900 border border-neutral-800 p-8 md:p-10 rounded-2xl shadow-xl transition-all hover:border-neutral-700">
+                            <!-- Timeline node dot -->
+                            <div class="absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-[#22c55e] border-4 border-[#0b0b0b] hidden sm:block"></div>
+                            
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2019 — 2020</span>
+                                <span class="text-xs text-neutral-500 font-mono">Foundational Era</span>
+                            </div>
+                            <h3 class="text-2xl font-normal text-white mb-2">The Kwak Brothers</h3>
+                            <h4 class="text-sm font-medium text-[#d83a3a] mb-4">WordPress Developer / Designer</h4>
+                            <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
+                                Developing and maintaining the website front-end &amp; backend, from coding pages from the ground up to ongoing upkeep, fixing Google Search Console issues, driving SEO initiatives, configuring Google Analytics, establishing mailing lists, setting up WooCommerce product pages, implementing e-commerce and funnel platforms such as Shopify, ClickFunnels, and GoHighLevel, and leading full-site redesigns.
+                            </p>
+                        </div>
+
+                        <!-- Experience Card 2 -->
+                        <div class="experience-pin-card relative bg-neutral-900 border border-neutral-800 p-8 md:p-10 rounded-2xl shadow-xl transition-all hover:border-neutral-700">
+                            <!-- Timeline node dot -->
+                            <div class="absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-[#22c55e] border-4 border-[#0b0b0b] hidden sm:block"></div>
+                            
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2020 — 2022</span>
+                                <span class="text-xs text-neutral-500 font-mono">Agency Scaling</span>
+                            </div>
+                            <h3 class="text-2xl font-normal text-white mb-2">Sher Agency</h3>
+                            <h4 class="text-sm font-medium text-[#d83a3a] mb-4">Website Developer</h4>
+                            <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
+                                Responsible for end-to-end website support: integrating databases and servers, building pages from scratch, performing ongoing maintenance, fixing Google Search Console issues, delivering SEO improvements, configuring Google Analytics, setting up mailing lists and WooCommerce product pages, and executing full-site redesigns.
+                            </p>
+                        </div>
+
+                        <!-- Experience Card 3 -->
+                        <div class="experience-pin-card relative bg-neutral-900 border border-neutral-800 p-8 md:p-10 rounded-2xl shadow-xl transition-all hover:border-neutral-700">
+                            <!-- Timeline node dot -->
+                            <div class="absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-[#22c55e] border-4 border-[#0b0b0b] hidden sm:block"></div>
+                            
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2022 — 2026</span>
+                                <span class="text-xs text-neutral-500 font-mono">Senior Leadership</span>
+                            </div>
+                            <h3 class="text-2xl font-normal text-white mb-2">Networld Online</h3>
+                            <h4 class="text-sm font-medium text-[#d83a3a] mb-4">WordPress Designer / Developer</h4>
+                            <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
+                                WordPress developer who builds custom pages from the ground up, keeps sites running smoothly, fixes Google Search Console errors, drives search-engine optimization, implements Google Analytics, sets up mailing lists and WooCommerce product pages, refreshes site designs, crafts bespoke themes and plugins, and troubleshoots any content-related issues.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="max-w-4xl space-y-12">
-                <div class="bg-neutral-900 p-8 md:p-10 rounded-2xl border border-neutral-800 shadow-sm relative">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
-                        <h3 class="text-xl md:text-2xl font-normal text-white">Senior Website Developer &amp; SEO Specialist</h3>
-                        <span class="text-xs font-mono bg-neutral-800 text-neutral-300 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2022 — Present</span>
+        </div>
+    </section>
+
+    <!-- EDUCATION & CREDENTIALS SECTION -->
+    <section class="py-24 border-t border-neutral-800 bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">/Academic &amp; Training</span>
+                <h2 class="text-3xl md:text-5xl font-light tracking-tight">Education &amp; Certifications</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Edu 1 -->
+                <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-[#22c55e] bg-[#22c55e]/10 px-3 py-1 rounded-full inline-block mb-4">2015 — 2019</span>
+                        <h3 class="text-xl font-normal text-white mb-2">Holy Cross of Davao College</h3>
+                        <p class="text-sm text-neutral-400 font-light">Bachelor of Science in Information Technology</p>
                     </div>
-                    <span class="text-sm text-[#d83a3a] font-medium block mb-4">Independent Agency &amp; Direct Client Partnerships</span>
-                    <p class="text-neutral-400 font-light leading-relaxed mb-6">
-                        Leading full-cycle web development, architectural database migrations, site performance overhauls, and custom UI design for corporate and service-based brands globally. Directed complex launches across high-speed servers and customized advanced checkout structures.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1 rounded">WordPress</span>
-                        <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1 rounded">Elementor Pro</span>
-                        <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1 rounded">SiteGround &amp; Kinsta</span>
-                        <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1 rounded">PHP / CSS</span>
+                    <div class="pt-6 mt-6 border-t border-neutral-800 text-xs text-neutral-500 font-mono">
+                        Degree Completed
                     </div>
                 </div>
 
-                <div class="bg-neutral-900 p-8 md:p-10 rounded-2xl border border-neutral-800 shadow-sm relative">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
-                        <h3 class="text-xl md:text-2xl font-normal text-white">Web Designer &amp; Front-End Developer</h3>
-                        <span class="text-xs font-mono bg-neutral-800 text-neutral-300 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2019 — 2022</span>
+                <!-- Edu 2 -->
+                <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-[#22c55e] bg-[#22c55e]/10 px-3 py-1 rounded-full inline-block mb-4">2019 — 2020</span>
+                        <h3 class="text-xl font-normal text-white mb-2">School of Virtual Assistance (SOVA)</h3>
+                        <p class="text-sm text-neutral-400 font-light">Web Development Bootcamp</p>
                     </div>
-                    <span class="text-sm text-[#d83a3a] font-medium block mb-4">Digital Growth Agency</span>
-                    <p class="text-neutral-400 font-light leading-relaxed mb-6">
-                        Engineered dynamic user interfaces, custom responsive layouts, and conversion-optimized landing pages. Spearheaded client site restructurings, improving overall conversion metrics and mobile performance scores across varied market verticals.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1 rounded">UI/UX Design</span>
-                        <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1 rounded">Divi Theme</span>
-                        <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1 rounded">JavaScript</span>
-                        <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1 rounded">Technical SEO</span>
+                    <div class="pt-6 mt-6 border-t border-neutral-800 text-xs text-neutral-500 font-mono">
+                        Intensive Training
+                    </div>
+                </div>
+
+                <!-- Edu 3 -->
+                <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-[#22c55e] bg-[#22c55e]/10 px-3 py-1 rounded-full inline-block mb-4">2020</span>
+                        <h3 class="text-xl font-normal text-white mb-2">WordPress Training &amp; Seminars</h3>
+                        <p class="text-sm text-neutral-400 font-light">WordPress Development Training</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-neutral-800 text-xs text-neutral-500 font-mono">
+                        Specialized Seminar
                     </div>
                 </div>
             </div>
@@ -439,7 +538,7 @@
         </div>
     </section>
 
-    <!-- Script File -->
+    <!-- Script File with Sticky Scroll Pinning Logic -->
     <script src="script.js" defer></script>
 </body>
 </html>
