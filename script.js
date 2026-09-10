@@ -16,13 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Pinned Timeline Scroll-Driven Sequential Card Reveal Logic
+    // Pinned Timeline Scroll-Driven 3-Column Card Reveal & Dot Lighting Logic
     const experienceContainer = document.querySelector('.experience-pin-container');
     const experienceCards = document.querySelectorAll('.experience-pin-card');
-    const progressLine = document.getElementById('timeline-progress-line');
+    const timelineDots = document.querySelectorAll('.timeline-dot-indicator');
 
     if (experienceContainer && experienceCards.length > 0) {
-        // Ensure first card is active on initial load if already in view
         function handleScrollPinning() {
             const rect = experienceContainer.getBoundingClientRect();
             const containerHeight = experienceContainer.offsetHeight;
@@ -33,10 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const maxScroll = containerHeight - windowHeight;
                 let progress = scrollDistance / maxScroll;
                 progress = Math.max(0, Math.min(1, progress));
-
-                if (progressLine) {
-                    progressLine.style.height = `${progress * 100}%`;
-                }
 
                 const totalCards = experienceCards.length;
                 const activeIndex = Math.min(
@@ -51,16 +46,28 @@ document.addEventListener('DOMContentLoaded', () => {
                         card.classList.remove('active');
                     }
                 });
+
+                timelineDots.forEach((dot, idx) => {
+                    if (idx <= activeIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
             } else if (rect.top > 0) {
-                experienceCards.forEach((card, idx) => {
+                experienceCards.forEach((card) => {
                     card.classList.remove('active');
                 });
-                if (progressLine) progressLine.style.height = '0%';
+                timelineDots.forEach((dot) => {
+                    dot.classList.remove('active');
+                });
             } else if (rect.bottom < windowHeight) {
                 experienceCards.forEach((card) => {
                     card.classList.add('active');
                 });
-                if (progressLine) progressLine.style.height = '100%';
+                timelineDots.forEach((dot) => {
+                    dot.classList.add('active');
+                });
             }
         }
 
