@@ -120,28 +120,32 @@ body {
     }
 }
 
-/* Feature Work Image Wave Hover Effect */
+/* Creativeans-style Smooth Zoom & Wave Effect */
 .project-card {
     overflow: hidden;
+    position: relative;
 }
 
 .project-card img {
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
 }
 
 .project-card:hover img {
-    transform: scale(1.08) rotate(1deg);
-    animation: imageWave 1.2s ease-in-out infinite alternate;
+    transform: scale(1.08) rotate(0.5deg);
+    animation: creativeansWave 2.5s ease-in-out infinite alternate;
 }
 
-@keyframes imageWave {
+@keyframes creativeansWave {
     0% {
         transform: scale(1.08) translateY(0) skewX(0deg);
     }
     50% {
-        transform: scale(1.10) translateY(-4px) skewX(1.5deg);
+        transform: scale(1.11) translateY(-3px) skewX(1deg);
     }
     100% {
-        transform: scale(1.08) translateY(2px) skewX(-1.5deg);
+        transform: scale(1.08) translateY(2px) skewX(-1deg);
     }
 }
