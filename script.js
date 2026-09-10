@@ -1,11 +1,14 @@
+// Sticky Experience Row-Pinning & Scroll Interaction Handler
 document.addEventListener('DOMContentLoaded', () => {
-    const row1 = document.querySelector('.marquee-row-1');
-    const row2 = document.querySelector('.marquee-row-2');
+    console.log("Ian Carlo Casilad Portfolio Loaded Successfully.");
 
-    if (row1) {
-        row1.innerHTML += row1.innerHTML; // Seamlessly duplicate track items for infinite marquee loop
-    }
-    if (row2) {
-        row2.innerHTML += row2.innerHTML; // Seamlessly duplicate track items for infinite marquee loop
+    const cards = document.querySelectorAll('.experience-pin-card');
+    
+    // Optional dynamic elevation or stacking visual enhancements on desktop
+    if (window.innerWidth >= 1024) {
+        cards.forEach((card, index) => {
+            // Stagger top offsets slightly so stacked cards form a neat card-deck visual layer when pinned
+            card.style.top = `${120 + (index * 24)}px`;
+        });
     }
 });
