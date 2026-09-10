@@ -20,18 +20,22 @@
 .carousel-wrapper {
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    overflow: hidden;
+    width: 100%;
+}
+
+.marquee-row-1, .marquee-row-2 {
+    display: flex;
+    width: max-content;
+    will-change: transform;
 }
 
 .marquee-row-1 {
-    display: flex;
-    width: max-content;
-    animation: scrollLeft 35s linear infinite;
+    animation: scrollLeft 45s linear infinite;
 }
 
 .marquee-row-2 {
-    display: flex;
-    width: max-content;
-    animation: scrollRight 35s linear infinite;
+    animation: scrollRight 45s linear infinite;
 }
 
 /* Pause marquee animation on hover */
@@ -40,12 +44,13 @@
     animation-play-state: paused;
 }
 
-/* Card hover glow and smooth transition */
+/* Card styling & smooth transition */
 .project-card {
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+    flex-shrink: 0;
 }
 
 .project-card:hover {
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-4px);
 }
