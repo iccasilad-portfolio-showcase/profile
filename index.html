@@ -393,77 +393,64 @@
         </div>
     </section>
 
-    <!-- EXPERIENCE SECTION WITH PINNED SCROLL EFFECT -->
-    <section id="experience" class="experience-pin-container py-16 md:py-24 border-t border-neutral-800 relative min-h-[300vh]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 sticky top-28 md:top-32 h-[calc(100vh-8rem)] flex flex-col justify-center">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center h-full">
-                <div class="lg:col-span-5 pt-4">
-                    <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-3">/Career Path</span>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight mb-6 leading-tight">Professional Journey &amp; Experience</h2>
-                    <p class="text-neutral-400 font-light text-sm sm:text-base leading-relaxed mb-8">
-                        A chronological breakdown of my multi-year evolution engineering high-end WordPress platforms, database infrastructures, and conversion-focused web architectures.
-                    </p>
-                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 mb-8 hidden lg:block">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-10 h-10 rounded-full bg-[#d83a3a]/20 text-[#d83a3a] flex items-center justify-center font-bold text-sm">8+</div>
-                            <div>
-                                <h4 class="text-sm font-medium text-white">Years of Continuous Impact</h4>
-                                <span class="text-xs text-neutral-400 font-mono">Full-Stack &amp; WordPress Specialist</span>
-                            </div>
-                        </div>
-                        <div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
-                            <div class="bg-[#d83a3a] h-full w-full"></div>
-                        </div>
+    <!-- EXPERIENCE SECTION WITH 3-COLUMN SCROLL REVEAL EFFECT -->
+    <section id="experience" class="experience-pin-container py-16 md:py-24 border-t border-neutral-800 relative min-h-[250vh]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 sticky top-28 md:top-32">
+            <div class="mb-12 md:mb-16 text-center max-w-2xl mx-auto">
+                <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-3">/Career Path</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight mb-4 leading-tight">Professional Journey &amp; Experience</h2>
+                <p class="text-neutral-400 font-light text-sm sm:text-base leading-relaxed">
+                    Scroll down to explore my multi-year evolution across web architecture and engineering roles.
+                </p>
+                <!-- Timeline Lighting Dots Indicator Navigation -->
+                <div class="flex items-center justify-center space-x-4 mt-8">
+                    <div class="timeline-dot-indicator w-3 h-3 rounded-full bg-neutral-800 border border-neutral-700 transition-all duration-300" data-index="0"></div>
+                    <div class="w-12 h-0.5 bg-neutral-800"></div>
+                    <div class="timeline-dot-indicator w-3 h-3 rounded-full bg-neutral-800 border border-neutral-700 transition-all duration-300" data-index="1"></div>
+                    <div class="w-12 h-0.5 bg-neutral-800"></div>
+                    <div class="timeline-dot-indicator w-3 h-3 rounded-full bg-neutral-800 border border-neutral-700 transition-all duration-300" data-index="2"></div>
+                </div>
+            </div>
+
+            <!-- 3 Column Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative">
+                <!-- Card 1 -->
+                <div class="experience-pin-card bg-neutral-900 border border-neutral-800 p-6 sm:p-8 rounded-2xl shadow-xl transition-all duration-500 opacity-30 translate-y-6" data-index="0">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2019 — 2020</span>
+                        <span class="text-xs text-neutral-500 font-mono">Foundational Era</span>
                     </div>
+                    <h3 class="text-xl sm:text-2xl font-normal text-white mb-2">The Kwak Brothers</h3>
+                    <h4 class="text-sm font-medium text-[#d83a3a] mb-4">WordPress Developer / Designer</h4>
+                    <p class="text-neutral-400 font-light text-sm leading-relaxed">
+                        Developing and maintaining website front-end &amp; backend, coding pages from the ground up, fixing Google Search Console issues, driving SEO initiatives, setting up WooCommerce product pages, and leading full-site redesigns.
+                    </p>
                 </div>
 
-                <div class="lg:col-span-7 relative h-[420px] sm:h-[480px] flex items-center overflow-hidden">
-                    <div class="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-neutral-800 hidden sm:block"></div>
-                    <div id="timeline-progress-line" class="absolute left-4 md:left-8 top-0 w-0.5 bg-[#22c55e] hidden sm:block transition-all duration-300 ease-out" style="height: 0%;"></div>
-
-                    <div class="relative w-full sm:pl-12 h-full">
-                        <!-- Card 1 -->
-                        <div class="experience-pin-card absolute inset-0 bg-neutral-900 border border-neutral-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-700 opacity-0 translate-y-12 pointer-events-none" data-index="0">
-                            <div class="timeline-dot absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-neutral-700 border-4 border-[#0b0b0b] transition-colors duration-300 hidden sm:block"></div>
-                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-                                <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2019 — 2020</span>
-                                <span class="text-xs text-neutral-500 font-mono">Foundational Era</span>
-                            </div>
-                            <h3 class="text-xl sm:text-2xl font-normal text-white mb-2">The Kwak Brothers</h3>
-                            <h4 class="text-sm font-medium text-[#d83a3a] mb-4">WordPress Developer / Designer</h4>
-                            <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
-                                Developing and maintaining the website front-end &amp; backend, from coding pages from the ground up to ongoing upkeep, fixing Google Search Console issues, driving SEO initiatives, configuring Google Analytics, establishing mailing lists, setting up WooCommerce product pages, and leading full-site redesigns.
-                            </p>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="experience-pin-card absolute inset-0 bg-neutral-900 border border-neutral-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-700 opacity-0 translate-y-12 pointer-events-none" data-index="1">
-                            <div class="timeline-dot absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-neutral-700 border-4 border-[#0b0b0b] transition-colors duration-300 hidden sm:block"></div>
-                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-                                <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2020 — 2022</span>
-                                <span class="text-xs text-neutral-500 font-mono">Agency Scaling</span>
-                            </div>
-                            <h3 class="text-xl sm:text-2xl font-normal text-white mb-2">Sher Agency</h3>
-                            <h4 class="text-sm font-medium text-[#d83a3a] mb-4">Website Developer</h4>
-                            <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
-                                Responsible for end-to-end website support: integrating databases and servers, building pages from scratch, performing ongoing maintenance, fixing Google Search Console issues, delivering SEO improvements, configuring Google Analytics, and executing full-site redesigns.
-                            </p>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="experience-pin-card absolute inset-0 bg-neutral-900 border border-neutral-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl transition-all duration-700 opacity-0 translate-y-12 pointer-events-none" data-index="2">
-                            <div class="timeline-dot absolute -left-[53px] top-10 w-4 h-4 rounded-full bg-neutral-700 border-4 border-[#0b0b0b] transition-colors duration-300 hidden sm:block"></div>
-                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-                                <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2022 — 2026</span>
-                                <span class="text-xs text-neutral-500 font-mono">Senior Leadership</span>
-                            </div>
-                            <h3 class="text-xl sm:text-2xl font-normal text-white mb-2">Networld Online</h3>
-                            <h4 class="text-sm font-medium text-[#d83a3a] mb-4">WordPress Designer / Developer</h4>
-                            <p class="text-neutral-400 font-light text-sm md:text-base leading-relaxed">
-                                WordPress developer who builds custom pages from the ground up, keeps sites running smoothly, fixes Google Search Console errors, drives search-engine optimization, implements Google Analytics, and crafts bespoke themes and plugins.
-                            </p>
-                        </div>
+                <!-- Card 2 -->
+                <div class="experience-pin-card bg-neutral-900 border border-neutral-800 p-6 sm:p-8 rounded-2xl shadow-xl transition-all duration-500 opacity-30 translate-y-6" data-index="1">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2020 — 2022</span>
+                        <span class="text-xs text-neutral-500 font-mono">Agency Scaling</span>
                     </div>
+                    <h3 class="text-xl sm:text-2xl font-normal text-white mb-2">Sher Agency</h3>
+                    <h4 class="text-sm font-medium text-[#d83a3a] mb-4">Website Developer</h4>
+                    <p class="text-neutral-400 font-light text-sm leading-relaxed">
+                        Responsible for end-to-end website support: integrating databases and servers, building pages from scratch, ongoing maintenance, fixing Google Search Console issues, delivering SEO improvements, and executing full-site redesigns.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="experience-pin-card bg-neutral-900 border border-neutral-800 p-6 sm:p-8 rounded-2xl shadow-xl transition-all duration-500 opacity-30 translate-y-6" data-index="2">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <span class="text-xs font-mono bg-[#22c55e]/10 text-[#22c55e] px-3 py-1 rounded-full font-semibold">2022 — 2026</span>
+                        <span class="text-xs text-neutral-500 font-mono">Senior Leadership</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-normal text-white mb-2">Networld Online</h3>
+                    <h4 class="text-sm font-medium text-[#d83a3a] mb-4">WordPress Designer / Developer</h4>
+                    <p class="text-neutral-400 font-light text-sm leading-relaxed">
+                        WordPress developer building custom pages from the ground up, keeping sites running smoothly, fixing Google Search Console errors, driving search-engine optimization, implementing Google Analytics, and crafting bespoke themes and plugins.
+                    </p>
                 </div>
             </div>
         </div>
