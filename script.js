@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Matrix Code Rain Background Animation
+    // Matrix Code Rain Background Animation (Numbers and Codes only)
     const canvas = document.getElementById('matrix-canvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
 
-        const characters = 'アカサタナハマヤラワイキシチニヒミリウクスツヌフムユルエケセテネヘメレオコソトノホモヨロ01234789<>/-+*+=[]{}';
+        // Strict restriction: numbers, brackets, operators, and hex/binary style tokens only
+        const characters = '01234789012347890123478901234789<>/-+*+=[]{}01';
         const fontSize = 14;
         let columns = Math.floor(canvas.width / fontSize);
         let drops = [];
