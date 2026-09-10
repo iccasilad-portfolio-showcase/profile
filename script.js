@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (experienceContainer && experienceCards.length > 0) {
         function handleScrollPinning() {
             const rect = experienceContainer.getBoundingClientRect();
-            const containerHeight = experienceContainer.offsetHeight;
             const windowHeight = window.innerHeight;
-
-            if (rect.top <= 0 && rect.bottom >= windowHeight) {
-                const scrollDistance = -rect.top;
-                const maxScroll = containerHeight - windowHeight;
-                let progress = scrollDistance / maxScroll;
+            
+            // Check if the container is currently in view
+            if (rect.top <= windowHeight * 0.5 && rect.bottom >= windowHeight * 0.5) {
+                const scrollDistance = windowHeight * 0.5 - rect.top;
+                const containerHeight = experienceContainer.offsetHeight - windowHeight;
+                let progress = containerHeight > 0 ? scrollDistance / containerHeight : 0;
                 progress = Math.max(0, Math.min(1, progress));
 
                 const totalCards = experienceCards.length;
@@ -54,26 +54,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         dot.classList.remove('active');
                     }
                 });
-            } else if (rect.top > 0) {
-                experienceCards.forEach((card) => {
-                    card.classList.remove('active');
-                });
-                timelineDots.forEach((dot) => {
-                    dot.classList.remove('active');
-                });
-            } else if (rect.bottom < windowHeight) {
-                experienceCards.forEach((card) => {
-                    card.classList.add('active');
-                });
-                timelineDots.forEach((dot) => {
-                    dot.classList.add('active');
-                });
+            } else if (rect.top > windowHeight * 0.5) {
+                // Before section comes into view
+                experienceCards.forEach((card) => card.classList.remove('active'));
+                timelineDots.forEach((dot) => dot.classList.remove('active'));
+            } else if (rect.bottom < windowHeight * 0.5) {
+                // After section has passed
+                experienceCards.forEach((card) => card.classList.add('active'));
+                timelineDots.forEach((dot) => dot.classList.add('active'));
             }
         }
 
-        window.addEventListener('scroll', handleScrollPinning);
+        window.addEventListener('scroll', handleScrollPinning, { passive: true });
         window.addEventListener('resize', handleScrollPinning);
-        handleScrollPinning(); // trigger once on load
+        handleScrollPinning(); // Trigger once on load
     }
 
     // Testimonials Carousel Logic
