@@ -1,0 +1,4 @@
+/* Custom transitions and styling overrides */
+.project-preview-img {
+    transition: opacity 0.4s ease-in-out, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}

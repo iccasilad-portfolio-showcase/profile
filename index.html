@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Carlo Casilad — Senior Website Developer & Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f0f0f',
+                            light: '#f8f8f6',
+                            accent: '#d83a3a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#fcfbfc] text-neutral-900 font-sans antialiased selection:bg-black selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#fcfbfc]/80 backdrop-blur-md border-b border-neutral-200/60">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tighter uppercase">
+                Ian Casilad<span class="text-[#d83a3a]">.</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-neutral-600">
+                <a href="#about" class="hover:text-black transition-colors">About</a>
+                <a href="#works" class="hover:text-black transition-colors">Featured Works</a>
+                <a href="#experience" class="hover:text-black transition-colors">Experience</a>
+                <a href="#testimonials" class="hover:text-black transition-colors">Testimonials</a>
+            </nav>
+            <div>
+                <a href="#contact" class="hidden sm:inline-block text-xs font-semibold uppercase tracking-wider bg-black text-white px-5 py-3 rounded-full hover:bg-neutral-800 transition-colors">
+                    Let's Talk
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="pt-36 pb-20 md:pt-48 md:pb-32 px-6 max-w-7xl mx-auto">
+        <div class="max-w-4xl">
+            <span class="inline-block text-xs font-bold tracking-widest uppercase text-neutral-400 mb-4">
+                8+ Years Expertise in Web Architecture & Development
+            </span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-light tracking-tight leading-[1.1] mb-8">
+                Engineering high-performance digital experiences that <span class="font-normal underline decoration-2 decoration-[#d83a3a]">convert</span>.
+            </h1>
+            <p class="text-lg md:text-xl text-neutral-600 font-light max-w-2xl leading-relaxed mb-10">
+                Senior Website Developer &amp; UI/UX Specialist crafting bespoke web platforms, advanced WordPress builds, and custom performance solutions.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#works" class="bg-black text-white px-7 py-4 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-neutral-800 transition-all">Explore Works</a>
+                <a href="#contact" class="border border-neutral-300 px-7 py-4 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-black transition-all">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-24 border-t border-neutral-200 bg-neutral-100/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold tracking-widest uppercase text-neutral-400 block mb-2">About Developer</span>
+                    <h2 class="text-3xl md:text-5xl font-light tracking-tight mb-6">Precision, performance, and clean code.</h2>
+                    <p class="text-neutral-600 font-light leading-relaxed mb-6">
+                        For nearly a decade, I’ve operated at the intersection of stunning design and rock-solid technical execution. Whether migrating complex infrastructures, optimizing Core Web Vitals, or engineering high-end interactive layouts, my work bridges the gap between creative vision and scalable architecture.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-neutral-200">
+                        <div>
+                            <span class="block text-3xl font-light text-black mb-1">8+</span>
+                            <span class="text-xs uppercase tracking-wider text-neutral-500">Years Experience</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-light text-black mb-1">100+</span>
+                            <span class="text-xs uppercase tracking-wider text-neutral-500">Projects Delivered</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+                        <span class="text-[#d83a3a] font-mono text-xs block mb-2">01 / EXPERTISE</span>
+                        <h3 class="text-lg font-medium mb-2">Advanced CMS & Frameworks</h3>
+                        <p class="text-sm text-neutral-500 font-light">Deep mastery over WordPress ecosystem, Elementor Pro, Divi, custom PHP functions, and high-tier hosting like SiteGround and Kinsta.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+                        <span class="text-[#d83a3a] font-mono text-xs block mb-2">02 / PERFORMANCE</span>
+                        <h3 class="text-lg font-medium mb-2">Speed & Core Web Vitals</h3>
+                        <p class="text-sm text-neutral-500 font-light">Obsessive optimization balancing rich cinematic UI/UX features with lightning-fast mobile loading and render-efficiency.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+                        <span class="text-[#d83a3a] font-mono text-xs block mb-2">03 / DESIGN INTENT</span>
+                        <h3 class="text-lg font-medium mb-2">Luxury & Cinematic UX</h3>
+                        <p class="text-sm text-neutral-500 font-light">Designing immersive web components inspired by world-class brand aesthetic standards and interactive layouts.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+                        <span class="text-[#d83a3a] font-mono text-xs block mb-2">04 / STRATEGY</span>
+                        <h3 class="text-lg font-medium mb-2">SEO & Architecture</h3>
+                        <p class="text-sm text-neutral-500 font-light">Technical SEO foundation integrated natively into every line of code to secure long-term organic visibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED WORKS SECTION -->
+    <section id="works" class="py-24 border-t border-neutral-200">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs font-bold tracking-widest uppercase text-neutral-400 block mb-2">Portfolio</span>
+                    <h2 class="text-3xl md:text-5xl font-light tracking-tight">Featured Works</h2>
+                </div>
+                <p class="text-neutral-500 max-w-xs mt-4 md:mt-0 text-sm font-light">
+                    A curated glimpse of high-impact web builds, enterprise migrations, and interactive digital interfaces.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative items-start">
+                
+                <!-- Left Interactive Project List -->
+                <div class="lg:col-span-7 flex flex-col divide-y divide-neutral-200 border-t border-b border-neutral-200" id="project-list">
+                    
+                    <a href="#" class="project-item group py-8 flex items-center justify-between transition-colors" 
+                       data-img="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"
+                       data-category="Enterprise Migration & Architecture"
+                       data-title="Maggy Maid Live Deployment">
+                        <div>
+                            <span class="text-xs font-mono text-neutral-400 block mb-1">01 / 04</span>
+                            <h3 class="text-2xl md:text-4xl font-light group-hover:translate-x-3 transition-transform duration-300">Maggy Maid Infrastructure</h3>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="hidden sm:inline-block text-xs uppercase tracking-wider text-neutral-400 group-hover:text-black">View Case</span>
+                            <div class="w-10 h-10 rounded-full border border-neutral-300 flex items-center justify-center group-hover:bg-black group-hover:text-white group-hover:border-black transition-all">
+                                <svg class="w-4 h-4 transform -rotate-45 group-hover:rotate-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="project-item group py-8 flex items-center justify-between transition-colors" 
+                       data-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+                       data-category="Custom E-Commerce & UX Blocks"
+                       data-title="Halo Turf Interactive Showcase">
+                        <div>
+                            <span class="text-xs font-mono text-neutral-400 block mb-1">02 / 04</span>
+                            <h3 class="text-2xl md:text-4xl font-light group-hover:translate-x-3 transition-transform duration-300">Halo Turf Product Engine</h3>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="hidden sm:inline-block text-xs uppercase tracking-wider text-neutral-400 group-hover:text-black">View Case</span>
+                            <div class="w-10 h-10 rounded-full border border-neutral-300 flex items-center justify-center group-hover:bg-black group-hover:text-white group-hover:border-black transition-all">
+                                <svg class="w-4 h-4 transform -rotate-45 group-hover:rotate-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="project-item group py-8 flex items-center justify-between transition-colors" 
+                       data-img="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop"
+                       data-category="Full Re-branding & UI Redesign"
+                       data-title="All Faze & LJ’s Solutions">
+                        <div>
+                            <span class="text-xs font-mono text-neutral-400 block mb-1">03 / 04</span>
+                            <h3 class="text-2xl md:text-4xl font-light group-hover:translate-x-3 transition-transform duration-300">All Faze Electric Platform</h3>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="hidden sm:inline-block text-xs uppercase tracking-wider text-neutral-400 group-hover:text-black">View Case</span>
+                            <div class="w-10 h-10 rounded-full border border-neutral-300 flex items-center justify-center group-hover:bg-black group-hover:text-white group-hover:border-black transition-all">
+                                <svg class="w-4 h-4 transform -rotate-45 group-hover:rotate-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="project-item group py-8 flex items-center justify-between transition-colors" 
+                       data-img="https://images.unsplash.com/photo-1542744094-3a31243364d0?q=80&w=1200&auto=format&fit=crop"
+                       data-category="Performance & Speed Optimization"
+                       data-title="Core Web Vitals Overhaul">
+                        <div>
+                            <span class="text-xs font-mono text-neutral-400 block mb-1">04 / 04</span>
+                            <h3 class="text-2xl md:text-4xl font-light group-hover:translate-x-3 transition-transform duration-300">Enterprise Speed Optimization</h3>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="hidden sm:inline-block text-xs uppercase tracking-wider text-neutral-400 group-hover:text-black">View Case</span>
+                            <div class="w-10 h-10 rounded-full border border-neutral-300 flex items-center justify-center group-hover:bg-black group-hover:text-white group-hover:border-black transition-all">
+                                <svg class="w-4 h-4 transform -rotate-45 group-hover:rotate-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Right Sticky Hover Preview Box -->
+                <div class="lg:col-span-5 lg:sticky lg:top-28 hidden lg:block">
+                    <div class="w-full h-[500px] bg-neutral-100 relative overflow-hidden rounded-lg shadow-sm">
+                        <img id="preview-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" 
+                             alt="Project Preview" 
+                             class="project-preview-img w-full h-full object-cover">
+                        
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-md flex justify-between items-center shadow-lg">
+                            <div>
+                                <span id="preview-category" class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 block">Enterprise Migration & Architecture</span>
+                                <span id="preview-title" class="text-sm font-medium text-neutral-900">Maggy Maid Live Deployment</span>
+                            </div>
+                            <span class="text-xs font-semibold bg-black text-white px-3 py-1.5 rounded">Explore</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WORK EXPERIENCE SECTION -->
+    <section id="experience" class="py-24 border-t border-neutral-200 bg-neutral-100/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-neutral-400 block mb-2">Career Track</span>
+                <h2 class="text-3xl md:text-5xl font-light tracking-tight">Work Experience</h2>
+            </div>
+
+            <div class="max-w-4xl space-y-12">
+                
+                <div class="bg-white p-8 md:p-10 rounded-2xl border border-neutral-200 shadow-sm relative">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                        <h3 class="text-xl md:text-2xl font-normal">Senior Website Developer &amp; SEO Specialist</h3>
+                        <span class="text-xs font-mono bg-neutral-100 text-neutral-600 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2022 — Present</span>
+                    </div>
+                    <span class="text-sm text-[#d83a3a] font-medium block mb-4">Independent Agency &amp; Direct Client Partnerships</span>
+                    <p class="text-neutral-600 font-light leading-relaxed mb-6">
+                        Leading full-cycle web development, architectural database migrations, site performance overhauls, and custom UI design for corporate and service-based brands globally. Directed complex launches across high-speed servers and customized advanced checkout structures.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">WordPress</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">Elementor Pro</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">SiteGround &amp; Kinsta</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">PHP / CSS</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 md:p-10 rounded-2xl border border-neutral-200 shadow-sm relative">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                        <h3 class="text-xl md:text-2xl font-normal">Web Designer &amp; Front-End Developer</h3>
+                        <span class="text-xs font-mono bg-neutral-100 text-neutral-600 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2019 — 2022</span>
+                    </div>
+                    <span class="text-sm text-[#d83a3a] font-medium block mb-4">Digital Growth Agency</span>
+                    <p class="text-neutral-600 font-light leading-relaxed mb-6">
+                        Engineered dynamic user interfaces, custom responsive layouts, and conversion-optimized landing pages. Spearheaded client site restructurings, improving overall conversion metrics and mobile performance scores across varied market verticals.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">UI/UX Design</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">Divi Theme</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">JavaScript</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">Technical SEO</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 md:p-10 rounded-2xl border border-neutral-200 shadow-sm relative">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                        <h3 class="text-xl md:text-2xl font-normal">Junior Web Developer</h3>
+                        <span class="text-xs font-mono bg-neutral-100 text-neutral-600 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2018 — 2019</span>
+                    </div>
+                    <span class="text-sm text-[#d83a3a] font-medium block mb-4">Web Development Studio</span>
+                    <p class="text-neutral-600 font-light leading-relaxed mb-6">
+                        Assisted in website maintenance, template deployment, cross-browser debugging, and foundational HTML/CSS/PHP optimizations for expanding small business accounts.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">HTML5/CSS3</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">WordPress Core</span>
+                        <span class="text-xs bg-neutral-100 text-neutral-700 px-3 py-1 rounded">Debugging</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-24 border-t border-neutral-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs font-bold tracking-widest uppercase text-neutral-400 block mb-2">Social Proof</span>
+                    <h2 class="text-3xl md:text-5xl font-light tracking-tight">Client Testimonials</h2>
+                </div>
+                <p class="text-neutral-500 max-w-xs mt-4 md:mt-0 text-sm font-light">
+                    What project managers, stakeholders, and business partners say about collaborating with Ian.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-neutral-50 p-8 rounded-2xl border border-neutral-200 flex flex-col justify-between">
+                    <p class="text-neutral-700 font-light text-base leading-relaxed mb-8">
+                        &ldquo;Ian handled our massive site migration onto SiteGround with incredible precision. His technical depth and attention to performance saved us countless hours of downtime.&rdquo;
+                    </p>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-neutral-200">
+                        <div class="w-10 h-10 rounded-full bg-black text-white font-semibold flex items-center justify-center text-sm">MM</div>
+                        <div>
+                            <h4 class="text-sm font-medium">Maggy Maid Team</h4>
+                            <span class="text-xs text-neutral-400">Operations Lead</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-50 p-8 rounded-2xl border border-neutral-200 flex flex-col justify-between">
+                    <p class="text-neutral-700 font-light text-base leading-relaxed mb-8">
+                        &ldquo;Working with Ian on our custom product carousels and interactive layouts completely elevated our brand presentation. Clean code and great aesthetic sensibilities.&rdquo;
+                    </p>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-neutral-200">
+                        <div class="w-10 h-10 rounded-full bg-[#d83a3a] text-white font-semibold flex items-center justify-center text-sm">HT</div>
+                        <div>
+                            <h4 class="text-sm font-medium">Halo Turf Project Manager</h4>
+                            <span class="text-xs text-neutral-400">Digital Marketing Director</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-50 p-8 rounded-2xl border border-neutral-200 flex flex-col justify-between">
+                    <p class="text-neutral-700 font-light text-base leading-relaxed mb-8">
+                        &ldquo;Ian’s speed optimization and technical updates for All Faze and LJ’s solutions delivered immediate results. Highly reliable, communicative, and detail-oriented.&rdquo;
+                    </p>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-neutral-200">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 text-white font-semibold flex items-center justify-center text-sm">AF</div>
+                        <div>
+                            <h4 class="text-sm font-medium">All Faze Stakeholder</h4>
+                            <span class="text-xs text-neutral-400">Company Executive</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="bg-neutral-900 text-white py-24 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <span class="text-xs font-bold tracking-widest uppercase text-neutral-500 block mb-2">Get in Touch</span>
+                <h2 class="text-3xl md:text-5xl font-light tracking-tight mb-6">Let's build something exceptional together.</h2>
+                <p class="text-neutral-400 font-light mb-8 max-w-md">
+                    Looking for an experienced developer for your next web project, performance revamp, or platform migration? Drop a message.
+                </p>
+                <a href="mailto:ian.casilad.dev@gmail.com" class="inline-block text-lg font-medium border-b border-white pb-1 hover:text-[#d83a3a] hover:border-[#d83a3a] transition-colors">
+                    ian.casilad.dev@gmail.com
+                </a>
+            </div>
+            <div class="flex flex-col justify-between">
+                <div class="grid grid-cols-2 gap-8 text-sm text-neutral-400">
+                    <div>
+                        <strong class="text-white block mb-3 font-medium uppercase tracking-wider text-xs">Availability</strong>
+                        <p class="mb-2">Open for Freelance &amp; Contract Work</p>
+                        <p>Timezone: PHT (UTC+8)</p>
+                    </div>
+                    <div>
+                        <strong class="text-white block mb-3 font-medium uppercase tracking-wider text-xs">Socials</strong>
+                        <p class="mb-2"><a href="#" class="hover:text-white transition-colors">GitHub</a></p>
+                        <p class="mb-2"><a href="#" class="hover:text-white transition-colors">LinkedIn</a></p>
+                    </div>
+                </div>
+                <div class="mt-12 pt-8 border-t border-neutral-800 text-xs text-neutral-500 flex flex-col sm:flex-row justify-between">
+                    <p>&copy; 2026 Ian Carlo Casilad. All Rights Reserved.</p>
+                    <p class="mt-2 sm:mt-0">Modular GitHub Deployment Structure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript File Linking (Defer ensures DOM is parsed) -->
+    <script src="script.js" defer></script>
+</body>
+</html>
